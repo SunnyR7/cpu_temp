@@ -1,24 +1,4 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 2022/05/18 16:47:53
-// Design Name: 
-// Module Name: decode32
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
-
 
 module decode32(read_data_1,read_data_2,Instruction,mem_data,ALU_result,
                  Jal,RegWrite,MemtoReg,RegDst,Sign_extend,clock,reset,opcplus4);
