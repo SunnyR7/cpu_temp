@@ -2,11 +2,10 @@
 # Vivado v2017.4 (64-bit)
 # SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
 # IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
-# Start of session at: Wed May 18 17:11:07 2022
-# Process ID: 23608
-# Current directory: C:/Users/Lenovo/CPU/CPU.runs/RAM_synth_1
+# Start of session at: Wed May 18 22:14:15 2022
+# Process ID: 10192
+# Current directory: D:/VivadoProCS202/CPU/CPU.runs/RAM_synth_1
 # Command line: vivado.exe -log RAM.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source RAM.tcl
-# Log file: C:/Users/Lenovo/CPU/CPU.runs/RAM_synth_1/RAM.vds
-# Journal file: C:/Users/Lenovo/CPU/CPU.runs/RAM_synth_1\vivado.jou
+# Log file: D:/VivadoProCS202/CPU/CPU.runs/RAM_synth_1/RAM.vds
+# Journal file: D:/VivadoProCS202/CPU/CPU.runs/RAM_synth_1\vivado.jou
 #-----------------------------------------------------------
-source RAM.tcl -notrace
