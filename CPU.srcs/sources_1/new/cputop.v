@@ -53,6 +53,14 @@ module cputop (clk,rst,confirm,switch,led);
     //clock
     wire clock;
 
+    //
+    wire LEDCtrl;
+    wire SwitchCtrl;
+    wire [31:0] read_dataFromMemoryOrIo;
+    wire [31:0] write_dataToMemoryOrIo;
+
+    assign led=write_dataToMemoryOrIo[23:0];
+
     cpuclock CLK(
         .clkin(clk),
         .clkout(clock)
@@ -90,7 +98,7 @@ module cputop (clk,rst,confirm,switch,led);
             .I_format(I_format), 
             .Sftmd(Sftmd), 
             .ALUOp(ALUOp),
-            .Alu_resultHigh(), 
+            .Alu_resultHigh(ALU_Result[31:10]), 
             .MemRead(MemRead), 
             .IORead(IORead), 
             .IOWrite(IOWrite)
@@ -136,6 +144,21 @@ module cputop (clk,rst,confirm,switch,led);
         .clock(clock),
         .reset(rst),
         .opcplus4(link_addr)
+    );
+
+    MemOrIO memOrio( 
+        .mRead(MemRead), 
+        .mWrite(MemWrite), 
+        .ioRead(IORead), 
+        .ioWrite(IOWrite),
+        .addr_in(ALU_Result), 
+        .m_rdata(read_dataFromMemory), //从mem过来的data
+        .io_rdata({8'b0000_0000,switch}),//从io过来的data 
+        .r_wdata(read_dataFromMemoryOrIo), //写回给decoder的值 
+        .r_rdata(read_data_2), //从decoder中过来的data
+        .write_data(write_dataToMemoryOrIo),//写回给io或者mem中的值，就是上面的r_rdata(需要用这个信号时，这个信号没变)
+        .LEDCtrl(LEDCtrl), //当为1的时候，需要输出到led灯中
+        .SwitchCtrl(SwitchCtrl)//当为1的时候，需要从拨码开关中输入
     );
 
 endmodule
