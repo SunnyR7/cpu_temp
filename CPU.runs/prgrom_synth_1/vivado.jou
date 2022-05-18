@@ -9,3 +9,4 @@
 # Log file: D:/VivadoProCS202/CPU/CPU.runs/prgrom_synth_1/prgrom.vds
 # Journal file: D:/VivadoProCS202/CPU/CPU.runs/prgrom_synth_1\vivado.jou
 #-----------------------------------------------------------
+source prgrom.tcl -notrace

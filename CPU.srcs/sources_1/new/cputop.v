@@ -53,7 +53,7 @@ module cputop (clk,rst,confirm,switch,led);
     //clock
     wire clock;
 
-    //
+    //MemOrIO
     wire LEDCtrl;
     wire SwitchCtrl;
     wire [31:0] read_dataFromMemoryOrIo;
@@ -134,7 +134,7 @@ module cputop (clk,rst,confirm,switch,led);
         .read_data_1(read_data_1),
         .read_data_2(read_data_2),
         .Instruction(Instruction),
-        .mem_data(read_dataFromMemory),
+        .mem_data(read_dataFromMemoryOrIo),
         .ALU_result(ALU_Result),
         .Jal(Jal),
         .RegWrite(RegWrite),

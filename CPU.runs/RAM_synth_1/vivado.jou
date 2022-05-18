@@ -9,3 +9,4 @@
 # Log file: D:/VivadoProCS202/CPU/CPU.runs/RAM_synth_1/RAM.vds
 # Journal file: D:/VivadoProCS202/CPU/CPU.runs/RAM_synth_1\vivado.jou
 #-----------------------------------------------------------
+source RAM.tcl -notrace

@@ -17,8 +17,8 @@ output[31:0] r_wdata; // data to Decoder(register file)
 input[31:0] r_rdata; // data read from Decoder(register file)
 output reg[31:0] write_data; // data to memory or I/O??m_wdata, io_wdata??
 
-output reg LEDCtrl; // LED Chip Select
-output reg SwitchCtrl; // Switch Chip Select
+output  LEDCtrl; // LED Chip Select
+output  SwitchCtrl; // Switch Chip Select
 
 
 //assign addr_out= addr_in;
@@ -32,8 +32,6 @@ always @* begin
     if((mWrite==1)||(ioWrite==1))
     //wirte_data could go to either memory or IO. where is it from?
     write_data = r_rdata;
-    else
-    write_data = 32'haaaa_aaaa;
 end
 
 endmodule
