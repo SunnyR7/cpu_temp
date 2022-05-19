@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="15853000000fs"></ZoomStartTime>
-      <ZoomEndTime time="16412425483fs"></ZoomEndTime>
-      <Cursor1Time time="15940000000fs"></Cursor1Time>
+      <ZoomStartTime time="4886000000fs"></ZoomStartTime>
+      <ZoomEndTime time="4977400001fs"></ZoomEndTime>
+      <Cursor1Time time="4950200000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="182"></NameColumnWidth>
-      <ValueColumnWidth column_width="80"></ValueColumnWidth>
+      <ValueColumnWidth column_width="60"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="15" />
+   <WVObjectSize size="20" />
    <wvobject fp_name="/test1/sw" type="array">
       <obj_property name="ElementShortName">sw[23:0]</obj_property>
       <obj_property name="ObjectShortName">sw[23:0]</obj_property>
@@ -35,10 +35,6 @@
    <wvobject fp_name="/test1/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
-   </wvobject>
-   <wvobject fp_name="/test1/confirm" type="logic">
-      <obj_property name="ElementShortName">confirm</obj_property>
-      <obj_property name="ObjectShortName">confirm</obj_property>
    </wvobject>
    <wvobject fp_name="/test1/test1/clock" type="logic">
       <obj_property name="ElementShortName">clock</obj_property>
@@ -72,12 +68,36 @@
       <obj_property name="ElementShortName">m_rdata[31:0]</obj_property>
       <obj_property name="ObjectShortName">m_rdata[31:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/test1/test1/read_data_2" type="array">
-      <obj_property name="ElementShortName">read_data_2[31:0]</obj_property>
-      <obj_property name="ObjectShortName">read_data_2[31:0]</obj_property>
-   </wvobject>
    <wvobject fp_name="/test1/test1/decoder/registers[1]" type="array">
       <obj_property name="ElementShortName">[1][31:0]</obj_property>
       <obj_property name="ObjectShortName">[1][31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test1/test1/memOrio/r_rdata" type="array">
+      <obj_property name="ElementShortName">r_rdata[31:0]</obj_property>
+      <obj_property name="ObjectShortName">r_rdata[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test1/test1/decoder/read_data_2" type="array">
+      <obj_property name="ElementShortName">read_data_2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">read_data_2[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test1/test1/memOrio/ioWrite" type="logic">
+      <obj_property name="ElementShortName">ioWrite</obj_property>
+      <obj_property name="ObjectShortName">ioWrite</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test1/test1/decoder/registers[5]" type="array">
+      <obj_property name="ElementShortName">[5][31:0]</obj_property>
+      <obj_property name="ObjectShortName">[5][31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test1/test1/decoder/registers[6]" type="array">
+      <obj_property name="ElementShortName">[6][31:0]</obj_property>
+      <obj_property name="ObjectShortName">[6][31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test1/test1/decoder/registers[3]" type="array">
+      <obj_property name="ElementShortName">[3][31:0]</obj_property>
+      <obj_property name="ObjectShortName">[3][31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test1/test1/decoder/registers[4]" type="array">
+      <obj_property name="ElementShortName">[4][31:0]</obj_property>
+      <obj_property name="ObjectShortName">[4][31:0]</obj_property>
    </wvobject>
 </wave_config>

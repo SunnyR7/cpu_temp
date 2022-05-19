@@ -1,9 +1,9 @@
 `timescale 1ns / 1ps
 
 
-module cputop (clk,rst,switch,led);
+module cputop (clk,reset,switch,led);
     input clk;
-    input rst;
+    input reset;
     // input confirm;
     input[23:0] switch;
     output[23:0] led;
@@ -58,6 +58,8 @@ module cputop (clk,rst,switch,led);
     wire SwitchCtrl;
     wire [31:0] read_dataFromMemoryOrIo;
     wire [31:0] write_dataToMemoryOrIo;
+
+    wire rst;
 
     cpuclock CLK(
         .clkin(clk),
@@ -165,6 +167,12 @@ module cputop (clk,rst,switch,led);
         .reset(rst),
         .ioWrite(IOWrite),
         .dataToio(led)
+    );
+
+    key_debounce key_rst(
+        .sys_clk(clk),
+        .key(reset), //外部输入的按键值
+        .key_value(rst) //消抖后的按键值
     );
 
 endmodule
