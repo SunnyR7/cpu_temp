@@ -1,10 +1,10 @@
 `timescale 1ns / 1ps
 
 
-module cputop (clk,rst,confirm,switch,led);
+module cputop (clk,rst,switch,led);
     input clk;
     input rst;
-    input confirm;
+    // input confirm;
     input[23:0] switch;
     output[23:0] led;
     
@@ -59,8 +59,6 @@ module cputop (clk,rst,confirm,switch,led);
     wire [31:0] read_dataFromMemoryOrIo;
     wire [31:0] write_dataToMemoryOrIo;
 
-    assign led=write_dataToMemoryOrIo[23:0];
-
     cpuclock CLK(
         .clkin(clk),
         .clkout(clock)
@@ -104,14 +102,6 @@ module cputop (clk,rst,confirm,switch,led);
             .IOWrite(IOWrite)
     );
 
-    dmemory32 dmemory(
-        .clock(clock),
-        .memWrite(MemWrite),
-        .address(ALU_Result),
-        .writeData(read_data_2),
-        .readData(read_dataFromMemory)
-    );
-
     executs32 alu(
         .Read_data_1(read_data_1),
         .Read_data_2(read_data_2),
@@ -128,6 +118,14 @@ module cputop (clk,rst,confirm,switch,led);
         .ALU_Result(ALU_Result),
         .Addr_Result(Addr_Result),
         .PC_plus_4(branch_base_addr)
+    );
+
+    dmemory32 dmemory(
+        .clock(clock),
+        .memWrite(MemWrite),
+        .address(ALU_Result),
+        .writeData(read_data_2),
+        .readData(read_dataFromMemory)
     );
 
     decode32 decoder(
@@ -159,6 +157,14 @@ module cputop (clk,rst,confirm,switch,led);
         .write_data(write_dataToMemoryOrIo),//写回给io或者mem中的值，就是上面的r_rdata(需要用这个信号时，这个信号没变)
         .LEDCtrl(LEDCtrl), //当为1的时候，需要输出到led灯中
         .SwitchCtrl(SwitchCtrl)//当为1的时候，需要从拨码开关中输入
+    );
+
+    ioWrite32 ioWrite(
+        .writeData(write_dataToMemoryOrIo[23:0]),
+        .clock(clock),
+        .reset(rst),
+        .ioWrite(IOWrite),
+        .dataToio(led)
     );
 
 endmodule

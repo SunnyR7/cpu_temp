@@ -14,36 +14,38 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 15428 
+INFO: Helper process launched with PID 23172 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 343.816 ; gain = 102.992
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 343.273 ; gain = 101.363
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'cputop' [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:4]
 INFO: [Synth 8-638] synthesizing module 'cpuclock' [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cpuclock.v:3]
-INFO: [Synth 8-638] synthesizing module 'cpuclk' [D:/VivadoProCS202/CPU/CPU.runs/synth_1/.Xil/Vivado-12548-LAPTOP-8IF7AABH/realtime/cpuclk_stub.v:5]
-INFO: [Synth 8-256] done synthesizing module 'cpuclk' (1#1) [D:/VivadoProCS202/CPU/CPU.runs/synth_1/.Xil/Vivado-12548-LAPTOP-8IF7AABH/realtime/cpuclk_stub.v:5]
+INFO: [Synth 8-638] synthesizing module 'cpuclk' [D:/VivadoProCS202/CPU/CPU.runs/synth_1/.Xil/Vivado-31500-LAPTOP-8IF7AABH/realtime/cpuclk_stub.v:5]
+INFO: [Synth 8-256] done synthesizing module 'cpuclk' (1#1) [D:/VivadoProCS202/CPU/CPU.runs/synth_1/.Xil/Vivado-31500-LAPTOP-8IF7AABH/realtime/cpuclk_stub.v:5]
 INFO: [Synth 8-256] done synthesizing module 'cpuclock' (2#1) [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cpuclock.v:3]
 INFO: [Synth 8-638] synthesizing module 'Ifetc32' [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/Ifetc32.v:3]
-INFO: [Synth 8-638] synthesizing module 'prgrom' [D:/VivadoProCS202/CPU/CPU.runs/synth_1/.Xil/Vivado-12548-LAPTOP-8IF7AABH/realtime/prgrom_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'prgrom' (3#1) [D:/VivadoProCS202/CPU/CPU.runs/synth_1/.Xil/Vivado-12548-LAPTOP-8IF7AABH/realtime/prgrom_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'prgrom' [D:/VivadoProCS202/CPU/CPU.runs/synth_1/.Xil/Vivado-31500-LAPTOP-8IF7AABH/realtime/prgrom_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'prgrom' (3#1) [D:/VivadoProCS202/CPU/CPU.runs/synth_1/.Xil/Vivado-31500-LAPTOP-8IF7AABH/realtime/prgrom_stub.v:6]
 INFO: [Synth 8-256] done synthesizing module 'Ifetc32' (4#1) [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/Ifetc32.v:3]
 INFO: [Synth 8-638] synthesizing module 'control32' [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/control32.v:3]
 INFO: [Synth 8-256] done synthesizing module 'control32' (5#1) [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/control32.v:3]
-INFO: [Synth 8-638] synthesizing module 'dmemory32' [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/dmemory32.v:3]
-INFO: [Synth 8-638] synthesizing module 'RAM' [D:/VivadoProCS202/CPU/CPU.runs/synth_1/.Xil/Vivado-12548-LAPTOP-8IF7AABH/realtime/RAM_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'RAM' (6#1) [D:/VivadoProCS202/CPU/CPU.runs/synth_1/.Xil/Vivado-12548-LAPTOP-8IF7AABH/realtime/RAM_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'dmemory32' (7#1) [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/dmemory32.v:3]
 INFO: [Synth 8-638] synthesizing module 'executs32' [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/executs32.v:3]
 INFO: [Synth 8-226] default block is never used [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/executs32.v:39]
-INFO: [Synth 8-256] done synthesizing module 'executs32' (8#1) [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/executs32.v:3]
+INFO: [Synth 8-256] done synthesizing module 'executs32' (6#1) [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/executs32.v:3]
+INFO: [Synth 8-638] synthesizing module 'dmemory32' [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/dmemory32.v:3]
+INFO: [Synth 8-638] synthesizing module 'RAM' [D:/VivadoProCS202/CPU/CPU.runs/synth_1/.Xil/Vivado-31500-LAPTOP-8IF7AABH/realtime/RAM_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'RAM' (7#1) [D:/VivadoProCS202/CPU/CPU.runs/synth_1/.Xil/Vivado-31500-LAPTOP-8IF7AABH/realtime/RAM_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'dmemory32' (8#1) [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/dmemory32.v:3]
 INFO: [Synth 8-638] synthesizing module 'decode32' [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/decode32.v:3]
 WARNING: [Synth 8-567] referenced signal 'I_format' should be on the sensitivity list [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/decode32.v:24]
 WARNING: [Synth 8-567] referenced signal 'detail' should be on the sensitivity list [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/decode32.v:24]
 INFO: [Synth 8-256] done synthesizing module 'decode32' (9#1) [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/decode32.v:3]
 INFO: [Synth 8-638] synthesizing module 'MemOrIO' [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/MemOrIO.v:3]
 INFO: [Synth 8-256] done synthesizing module 'MemOrIO' (10#1) [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/MemOrIO.v:3]
+INFO: [Synth 8-638] synthesizing module 'ioWrite32' [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/ioWrite32.v:3]
+INFO: [Synth 8-256] done synthesizing module 'ioWrite32' (11#1) [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/ioWrite32.v:3]
 WARNING: [Synth 8-3848] Net Read_data_1 in module/entity cputop does not have driver. [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:15]
-INFO: [Synth 8-256] done synthesizing module 'cputop' (11#1) [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:4]
+INFO: [Synth 8-256] done synthesizing module 'cputop' (12#1) [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:4]
 WARNING: [Synth 8-3331] design MemOrIO has unconnected port mRead
 WARNING: [Synth 8-3331] design MemOrIO has unconnected port addr_in[31]
 WARNING: [Synth 8-3331] design MemOrIO has unconnected port addr_in[30]
@@ -77,12 +79,6 @@ WARNING: [Synth 8-3331] design MemOrIO has unconnected port addr_in[3]
 WARNING: [Synth 8-3331] design MemOrIO has unconnected port addr_in[2]
 WARNING: [Synth 8-3331] design MemOrIO has unconnected port addr_in[1]
 WARNING: [Synth 8-3331] design MemOrIO has unconnected port addr_in[0]
-WARNING: [Synth 8-3331] design executs32 has unconnected port Function_opcode[5]
-WARNING: [Synth 8-3331] design executs32 has unconnected port Function_opcode[4]
-WARNING: [Synth 8-3331] design executs32 has unconnected port Exe_opcode[5]
-WARNING: [Synth 8-3331] design executs32 has unconnected port Exe_opcode[4]
-WARNING: [Synth 8-3331] design executs32 has unconnected port Exe_opcode[3]
-WARNING: [Synth 8-3331] design executs32 has unconnected port Jr
 WARNING: [Synth 8-3331] design dmemory32 has unconnected port address[31]
 WARNING: [Synth 8-3331] design dmemory32 has unconnected port address[30]
 WARNING: [Synth 8-3331] design dmemory32 has unconnected port address[29]
@@ -101,9 +97,14 @@ WARNING: [Synth 8-3331] design dmemory32 has unconnected port address[17]
 WARNING: [Synth 8-3331] design dmemory32 has unconnected port address[16]
 WARNING: [Synth 8-3331] design dmemory32 has unconnected port address[1]
 WARNING: [Synth 8-3331] design dmemory32 has unconnected port address[0]
-WARNING: [Synth 8-3331] design cputop has unconnected port confirm
+WARNING: [Synth 8-3331] design executs32 has unconnected port Function_opcode[5]
+WARNING: [Synth 8-3331] design executs32 has unconnected port Function_opcode[4]
+WARNING: [Synth 8-3331] design executs32 has unconnected port Exe_opcode[5]
+WARNING: [Synth 8-3331] design executs32 has unconnected port Exe_opcode[4]
+WARNING: [Synth 8-3331] design executs32 has unconnected port Exe_opcode[3]
+WARNING: [Synth 8-3331] design executs32 has unconnected port Jr
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 409.230 ; gain = 168.406
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 409.062 ; gain = 167.152
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -112,52 +113,52 @@ Report Check Netlist:
 +------+------------------+-------+---------+-------+------------------+
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
-WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[31] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:69]
-WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[30] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:69]
-WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[29] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:69]
-WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[28] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:69]
-WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[27] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:69]
-WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[26] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:69]
-WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[25] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:69]
-WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[24] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:69]
-WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[23] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:69]
-WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[22] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:69]
-WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[21] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:69]
-WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[20] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:69]
-WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[19] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:69]
-WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[18] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:69]
-WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[17] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:69]
-WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[16] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:69]
-WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[15] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:69]
-WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[14] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:69]
-WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[13] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:69]
-WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[12] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:69]
-WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[11] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:69]
-WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[10] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:69]
-WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[9] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:69]
-WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[8] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:69]
-WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[7] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:69]
-WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[6] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:69]
-WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[5] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:69]
-WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[4] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:69]
-WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[3] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:69]
-WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[2] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:69]
-WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[1] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:69]
-WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[0] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:69]
+WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[31] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:67]
+WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[30] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:67]
+WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[29] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:67]
+WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[28] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:67]
+WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[27] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:67]
+WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[26] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:67]
+WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[25] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:67]
+WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[24] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:67]
+WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[23] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:67]
+WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[22] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:67]
+WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[21] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:67]
+WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[20] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:67]
+WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[19] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:67]
+WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[18] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:67]
+WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[17] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:67]
+WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[16] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:67]
+WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[15] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:67]
+WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[14] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:67]
+WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[13] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:67]
+WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[12] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:67]
+WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[11] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:67]
+WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[10] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:67]
+WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[9] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:67]
+WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[8] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:67]
+WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[7] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:67]
+WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[6] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:67]
+WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[5] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:67]
+WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[4] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:67]
+WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[3] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:67]
+WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[2] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:67]
+WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[1] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:67]
+WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[0] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:67]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 409.230 ; gain = 168.406
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 409.062 ; gain = 167.152
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a100tfgg484-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [D:/VivadoProCS202/CPU/CPU.runs/synth_1/.Xil/Vivado-12548-LAPTOP-8IF7AABH/dcp3/RAM_in_context.xdc] for cell 'dmemory/ram'
-Finished Parsing XDC File [D:/VivadoProCS202/CPU/CPU.runs/synth_1/.Xil/Vivado-12548-LAPTOP-8IF7AABH/dcp3/RAM_in_context.xdc] for cell 'dmemory/ram'
-Parsing XDC File [D:/VivadoProCS202/CPU/CPU.runs/synth_1/.Xil/Vivado-12548-LAPTOP-8IF7AABH/dcp4/prgrom_in_context.xdc] for cell 'ifetch/instmem'
-Finished Parsing XDC File [D:/VivadoProCS202/CPU/CPU.runs/synth_1/.Xil/Vivado-12548-LAPTOP-8IF7AABH/dcp4/prgrom_in_context.xdc] for cell 'ifetch/instmem'
-Parsing XDC File [D:/VivadoProCS202/CPU/CPU.runs/synth_1/.Xil/Vivado-12548-LAPTOP-8IF7AABH/dcp5/cpuclk_in_context.xdc] for cell 'CLK/clk'
-Finished Parsing XDC File [D:/VivadoProCS202/CPU/CPU.runs/synth_1/.Xil/Vivado-12548-LAPTOP-8IF7AABH/dcp5/cpuclk_in_context.xdc] for cell 'CLK/clk'
+Parsing XDC File [D:/VivadoProCS202/CPU/CPU.runs/synth_1/.Xil/Vivado-31500-LAPTOP-8IF7AABH/dcp3/RAM_in_context.xdc] for cell 'dmemory/ram'
+Finished Parsing XDC File [D:/VivadoProCS202/CPU/CPU.runs/synth_1/.Xil/Vivado-31500-LAPTOP-8IF7AABH/dcp3/RAM_in_context.xdc] for cell 'dmemory/ram'
+Parsing XDC File [D:/VivadoProCS202/CPU/CPU.runs/synth_1/.Xil/Vivado-31500-LAPTOP-8IF7AABH/dcp4/prgrom_in_context.xdc] for cell 'ifetch/instmem'
+Finished Parsing XDC File [D:/VivadoProCS202/CPU/CPU.runs/synth_1/.Xil/Vivado-31500-LAPTOP-8IF7AABH/dcp4/prgrom_in_context.xdc] for cell 'ifetch/instmem'
+Parsing XDC File [D:/VivadoProCS202/CPU/CPU.runs/synth_1/.Xil/Vivado-31500-LAPTOP-8IF7AABH/dcp5/cpuclk_in_context.xdc] for cell 'CLK/clk'
+Finished Parsing XDC File [D:/VivadoProCS202/CPU/CPU.runs/synth_1/.Xil/Vivado-31500-LAPTOP-8IF7AABH/dcp5/cpuclk_in_context.xdc] for cell 'CLK/clk'
 Parsing XDC File [D:/VivadoProCS202/CPU/CPU.srcs/constrs_1/new/cputop.xdc]
 Finished Parsing XDC File [D:/VivadoProCS202/CPU/CPU.srcs/constrs_1/new/cputop.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/VivadoProCS202/CPU/CPU.srcs/constrs_1/new/cputop.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/cputop_propImpl.xdc].
@@ -167,27 +168,27 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 774.641 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 774.738 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 774.641 ; gain = 533.816
+Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 774.738 ; gain = 532.828
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tfgg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 774.641 ; gain = 533.816
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 774.738 ; gain = 532.828
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property IO_BUFFER_TYPE = NONE for clk. (constraint file  D:/VivadoProCS202/CPU/CPU.runs/synth_1/.Xil/Vivado-12548-LAPTOP-8IF7AABH/dcp5/cpuclk_in_context.xdc, line 3).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for clk. (constraint file  D:/VivadoProCS202/CPU/CPU.runs/synth_1/.Xil/Vivado-12548-LAPTOP-8IF7AABH/dcp5/cpuclk_in_context.xdc, line 4).
+Applied set_property IO_BUFFER_TYPE = NONE for clk. (constraint file  D:/VivadoProCS202/CPU/CPU.runs/synth_1/.Xil/Vivado-31500-LAPTOP-8IF7AABH/dcp5/cpuclk_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for clk. (constraint file  D:/VivadoProCS202/CPU/CPU.runs/synth_1/.Xil/Vivado-31500-LAPTOP-8IF7AABH/dcp5/cpuclk_in_context.xdc, line 4).
 Applied set_property DONT_TOUCH = true for CLK/clk. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for dmemory/ram. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for ifetch/instmem. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 774.641 ; gain = 533.816
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 774.738 ; gain = 532.828
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5546] ROM "R_format" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "MemorIOtoReg" won't be mapped to RAM because it is too sparse
@@ -200,7 +201,7 @@ INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To p
 INFO: [Synth 8-5545] ROM "Zero" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 WARNING: [Synth 8-327] inferring latch for variable 'write_data_reg' [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/MemOrIO.v:34]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 774.641 ; gain = 533.816
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 774.738 ; gain = 532.828
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -219,6 +220,7 @@ Detailed RTL Component Info :
 	   2 Input     32 Bit         XORs := 1     
 +---Registers : 
 	               32 Bit    Registers := 32    
+	               24 Bit    Registers := 1     
 +---Muxes : 
 	   2 Input     32 Bit        Muxes := 397   
 	   3 Input     32 Bit        Muxes := 1     
@@ -268,6 +270,10 @@ Module MemOrIO
 Detailed RTL Component Info : 
 +---Muxes : 
 	   2 Input     32 Bit        Muxes := 1     
+Module ioWrite32 
+Detailed RTL Component Info : 
++---Registers : 
+	               24 Bit    Registers := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -290,7 +296,6 @@ WARNING: [Synth 8-3331] design executs32 has unconnected port Exe_opcode[5]
 WARNING: [Synth 8-3331] design executs32 has unconnected port Exe_opcode[4]
 WARNING: [Synth 8-3331] design executs32 has unconnected port Exe_opcode[3]
 WARNING: [Synth 8-3331] design executs32 has unconnected port Jr
-WARNING: [Synth 8-3331] design cputop has unconnected port confirm
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ifetch/link_addr_reg[0] )
 WARNING: [Synth 8-3332] Sequential element (ifetch/PC_reg[0]) is unused and will be removed from module cputop.
 WARNING: [Synth 8-3332] Sequential element (ifetch/link_addr_reg[0]) is unused and will be removed from module cputop.
@@ -302,41 +307,41 @@ WARNING: [Synth 8-3332] Sequential element (memOrio/write_data_reg[27]) is unuse
 WARNING: [Synth 8-3332] Sequential element (memOrio/write_data_reg[26]) is unused and will be removed from module cputop.
 WARNING: [Synth 8-3332] Sequential element (memOrio/write_data_reg[25]) is unused and will be removed from module cputop.
 WARNING: [Synth 8-3332] Sequential element (memOrio/write_data_reg[24]) is unused and will be removed from module cputop.
-INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][31]' (FDE) to 'decoder/registers_reg[0][30]'
-INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][29]' (FDE) to 'decoder/registers_reg[0][30]'
-INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][30]' (FDE) to 'decoder/registers_reg[0][28]'
+INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][17]' (FDE) to 'decoder/registers_reg[0][31]'
+INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][18]' (FDE) to 'decoder/registers_reg[0][31]'
+INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][19]' (FDE) to 'decoder/registers_reg[0][31]'
+INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][20]' (FDE) to 'decoder/registers_reg[0][31]'
+INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][30]' (FDE) to 'decoder/registers_reg[0][31]'
+INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][29]' (FDE) to 'decoder/registers_reg[0][31]'
+INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][31]' (FDE) to 'decoder/registers_reg[0][28]'
 INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][26]' (FDE) to 'decoder/registers_reg[0][28]'
 INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][27]' (FDE) to 'decoder/registers_reg[0][28]'
 INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][25]' (FDE) to 'decoder/registers_reg[0][28]'
 INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][28]' (FDE) to 'decoder/registers_reg[0][24]'
-INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][24]' (FDE) to 'decoder/registers_reg[0][23]'
-INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][0]' (FDE) to 'decoder/registers_reg[0][23]'
-INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][1]' (FDE) to 'decoder/registers_reg[0][23]'
-INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][2]' (FDE) to 'decoder/registers_reg[0][23]'
-INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][3]' (FDE) to 'decoder/registers_reg[0][23]'
-INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][4]' (FDE) to 'decoder/registers_reg[0][23]'
-INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][5]' (FDE) to 'decoder/registers_reg[0][23]'
-INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][6]' (FDE) to 'decoder/registers_reg[0][23]'
-INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][7]' (FDE) to 'decoder/registers_reg[0][23]'
-INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][8]' (FDE) to 'decoder/registers_reg[0][23]'
-INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][9]' (FDE) to 'decoder/registers_reg[0][23]'
-INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][10]' (FDE) to 'decoder/registers_reg[0][23]'
-INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][11]' (FDE) to 'decoder/registers_reg[0][23]'
-INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][12]' (FDE) to 'decoder/registers_reg[0][23]'
-INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][13]' (FDE) to 'decoder/registers_reg[0][23]'
-INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][14]' (FDE) to 'decoder/registers_reg[0][23]'
-INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][15]' (FDE) to 'decoder/registers_reg[0][23]'
-INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][16]' (FDE) to 'decoder/registers_reg[0][23]'
-INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][17]' (FDE) to 'decoder/registers_reg[0][23]'
-INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][18]' (FDE) to 'decoder/registers_reg[0][23]'
-INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][19]' (FDE) to 'decoder/registers_reg[0][23]'
-INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][20]' (FDE) to 'decoder/registers_reg[0][23]'
-INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][21]' (FDE) to 'decoder/registers_reg[0][23]'
-INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][22]' (FDE) to 'decoder/registers_reg[0][23]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (decoder/\registers_reg[0][23] )
-WARNING: [Synth 8-3332] Sequential element (registers_reg[0][23]) is unused and will be removed from module decode32.
+INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][21]' (FDE) to 'decoder/registers_reg[0][24]'
+INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][22]' (FDE) to 'decoder/registers_reg[0][24]'
+INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][23]' (FDE) to 'decoder/registers_reg[0][24]'
+INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][24]' (FDE) to 'decoder/registers_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][1]' (FDE) to 'decoder/registers_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][2]' (FDE) to 'decoder/registers_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][3]' (FDE) to 'decoder/registers_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][4]' (FDE) to 'decoder/registers_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][5]' (FDE) to 'decoder/registers_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][6]' (FDE) to 'decoder/registers_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][7]' (FDE) to 'decoder/registers_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][8]' (FDE) to 'decoder/registers_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][9]' (FDE) to 'decoder/registers_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][10]' (FDE) to 'decoder/registers_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][11]' (FDE) to 'decoder/registers_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][12]' (FDE) to 'decoder/registers_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][13]' (FDE) to 'decoder/registers_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][14]' (FDE) to 'decoder/registers_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][15]' (FDE) to 'decoder/registers_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][16]' (FDE) to 'decoder/registers_reg[0][0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (decoder/\registers_reg[0][0] )
+WARNING: [Synth 8-3332] Sequential element (registers_reg[0][0]) is unused and will be removed from module decode32.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:45 ; elapsed = 00:00:47 . Memory (MB): peak = 774.641 ; gain = 533.816
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:45 ; elapsed = 00:00:48 . Memory (MB): peak = 774.738 ; gain = 532.828
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -350,13 +355,13 @@ Start Applying XDC Timing Constraints
 INFO: [Synth 8-5578] Moved timing constraint from pin 'CLK/clk/clk_out1' to pin 'CLK/clk/bbstub_clk_out1/O'
 INFO: [Synth 8-5819] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:54 ; elapsed = 00:00:55 . Memory (MB): peak = 831.562 ; gain = 590.738
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:54 ; elapsed = 00:00:57 . Memory (MB): peak = 832.047 ; gain = 590.137
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:10 ; elapsed = 00:01:12 . Memory (MB): peak = 980.547 ; gain = 739.723
+Finished Timing Optimization : Time (s): cpu = 00:01:19 ; elapsed = 00:01:22 . Memory (MB): peak = 966.941 ; gain = 725.031
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -368,7 +373,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:17 ; elapsed = 00:01:18 . Memory (MB): peak = 1037.672 ; gain = 796.848
+Finished Technology Mapping : Time (s): cpu = 00:01:27 ; elapsed = 00:01:30 . Memory (MB): peak = 1018.477 ; gain = 776.566
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -392,7 +397,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:18 ; elapsed = 00:01:19 . Memory (MB): peak = 1037.672 ; gain = 796.848
+Finished IO Insertion : Time (s): cpu = 00:01:28 ; elapsed = 00:01:31 . Memory (MB): peak = 1018.477 ; gain = 776.566
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -405,7 +410,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:18 ; elapsed = 00:01:19 . Memory (MB): peak = 1037.672 ; gain = 796.848
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:28 ; elapsed = 00:01:31 . Memory (MB): peak = 1018.477 ; gain = 776.566
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -417,25 +422,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:18 ; elapsed = 00:01:19 . Memory (MB): peak = 1037.672 ; gain = 796.848
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:28 ; elapsed = 00:01:31 . Memory (MB): peak = 1018.477 ; gain = 776.566
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:19 ; elapsed = 00:01:20 . Memory (MB): peak = 1037.672 ; gain = 796.848
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:29 ; elapsed = 00:01:32 . Memory (MB): peak = 1018.477 ; gain = 776.566
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:19 ; elapsed = 00:01:21 . Memory (MB): peak = 1037.672 ; gain = 796.848
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:29 ; elapsed = 00:01:32 . Memory (MB): peak = 1018.477 ; gain = 776.566
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:19 ; elapsed = 00:01:21 . Memory (MB): peak = 1037.672 ; gain = 796.848
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:29 ; elapsed = 00:01:32 . Memory (MB): peak = 1018.477 ; gain = 776.566
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -458,15 +463,15 @@ Report Cell Usage:
 |2     |cpuclk |     1|
 |3     |prgrom |     1|
 |4     |CARRY4 |    24|
-|5     |LUT1   |    19|
-|6     |LUT2   |   140|
-|7     |LUT3   |   215|
-|8     |LUT4   |   225|
-|9     |LUT5   |   525|
-|10    |LUT6   |  1348|
-|11    |MUXF7  |   257|
-|12    |MUXF8  |   100|
-|13    |FDRE   |  1054|
+|5     |LUT1   |    10|
+|6     |LUT2   |   119|
+|7     |LUT3   |   198|
+|8     |LUT4   |   298|
+|9     |LUT5   |   478|
+|10    |LUT6   |  1241|
+|11    |MUXF7  |   258|
+|12    |MUXF8  |    36|
+|13    |FDRE   |  1078|
 |14    |LD     |    24|
 |15    |IBUF   |    25|
 |16    |OBUF   |    24|
@@ -476,22 +481,23 @@ Report Instance Areas:
 +------+----------+----------+------+
 |      |Instance  |Module    |Cells |
 +------+----------+----------+------+
-|1     |top       |          |  4045|
+|1     |top       |          |  3878|
 |2     |  alu     |executs32 |    16|
 |3     |  CLK     |cpuclock  |     2|
-|4     |  decoder |decode32  |  2131|
-|5     |  dmemory |dmemory32 |    32|
-|6     |  ifetch  |Ifetc32   |  1791|
-|7     |  memOrio |MemOrIO   |    24|
+|4     |  decoder |decode32  |  2132|
+|5     |  dmemory |dmemory32 |    36|
+|6     |  ifetch  |Ifetc32   |  1595|
+|7     |  ioWrite |ioWrite32 |    24|
+|8     |  memOrio |MemOrIO   |    24|
 +------+----------+----------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:19 ; elapsed = 00:01:21 . Memory (MB): peak = 1037.672 ; gain = 796.848
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:29 ; elapsed = 00:01:32 . Memory (MB): peak = 1018.477 ; gain = 776.566
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 19 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:08 ; elapsed = 00:01:14 . Memory (MB): peak = 1037.672 ; gain = 431.438
-Synthesis Optimization Complete : Time (s): cpu = 00:01:19 ; elapsed = 00:01:21 . Memory (MB): peak = 1037.672 ; gain = 796.848
+Synthesis finished with 0 errors, 0 critical warnings and 18 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:17 ; elapsed = 00:01:24 . Memory (MB): peak = 1018.477 ; gain = 410.891
+Synthesis Optimization Complete : Time (s): cpu = 00:01:29 ; elapsed = 00:01:32 . Memory (MB): peak = 1018.477 ; gain = 776.566
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 430 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 367 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -500,10 +506,10 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   LD => LDCE: 24 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-80 Infos, 112 Warnings, 0 Critical Warnings and 0 Errors encountered.
+82 Infos, 110 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:22 ; elapsed = 00:01:25 . Memory (MB): peak = 1037.672 ; gain = 807.473
+synth_design: Time (s): cpu = 00:01:32 ; elapsed = 00:01:37 . Memory (MB): peak = 1018.477 ; gain = 788.074
 INFO: [Common 17-1381] The checkpoint 'D:/VivadoProCS202/CPU/CPU.runs/synth_1/cputop.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file cputop_utilization_synth.rpt -pb cputop_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.047 . Memory (MB): peak = 1037.672 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Thu May 19 00:59:56 2022...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.055 . Memory (MB): peak = 1018.477 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Thu May 19 17:59:40 2022...

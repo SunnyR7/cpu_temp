@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-| Date             : Thu May 19 01:01:56 2022
+| Date             : Thu May 19 18:02:46 2022
 | Host             : LAPTOP-8IF7AABH running 64-bit major release  (build 9200)
 | Command          : report_power -file cputop_power_routed.rpt -pb cputop_power_summary_routed.pb -rpx cputop_power_routed.rpx
 | Design           : cputop
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.226        |
+| Total On-Chip Power (W)  | 0.204        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.127        |
-| Device Static (W)        | 0.099        |
+| Dynamic (W)              | 0.119        |
+| Device Static (W)        | 0.085        |
 | Effective TJA (C/W)      | 2.7          |
-| Max Ambient (C)          | 84.4         |
-| Junction Temperature (C) | 25.6         |
+| Max Ambient (C)          | 84.5         |
+| Junction Temperature (C) | 25.5         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -53,18 +53,18 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |     0.001 |        5 |       --- |             --- |
-| Slice Logic    |     0.004 |     4067 |       --- |             --- |
-|   LUT as Logic |     0.004 |     2191 |     63400 |            3.46 |
+| Slice Logic    |     0.003 |     3909 |       --- |             --- |
+|   LUT as Logic |     0.003 |     2131 |     63400 |            3.36 |
 |   CARRY4       |    <0.001 |       24 |     15850 |            0.15 |
-|   F7/F8 Muxes  |    <0.001 |      357 |     63400 |            0.56 |
-|   Register     |    <0.001 |     1082 |    126800 |            0.85 |
+|   F7/F8 Muxes  |    <0.001 |      294 |     63400 |            0.46 |
+|   Register     |    <0.001 |     1106 |    126800 |            0.87 |
 |   Others       |     0.000 |       88 |       --- |             --- |
-| Signals        |     0.006 |     3514 |       --- |             --- |
+| Signals        |     0.006 |     3415 |       --- |             --- |
 | Block RAM      |     0.005 |       29 |       135 |           21.48 |
 | PLL            |     0.103 |        1 |         6 |           16.67 |
-| I/O            |     0.008 |       50 |       285 |           17.54 |
-| Static Power   |     0.099 |          |           |                 |
-| Total          |     0.226 |          |           |                 |
+| I/O            |    <0.001 |       50 |       285 |           17.54 |
+| Static Power   |     0.085 |          |           |                 |
+| Total          |     0.204 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -74,9 +74,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.041 |       0.025 |      0.016 |
+| Vccint    |       1.000 |     0.040 |       0.025 |      0.016 |
 | Vccaux    |       1.800 |     0.070 |       0.052 |      0.018 |
-| Vcco33    |       3.300 |     0.006 |       0.002 |      0.004 |
+| Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -145,12 +145,12 @@ Table of Contents
 +------------------------------------------------+-----------+
 | Name                                           | Power (W) |
 +------------------------------------------------+-----------+
-| cputop                                         |     0.127 |
+| cputop                                         |     0.119 |
 |   CLK                                          |     0.103 |
 |     clk__0                                     |     0.103 |
 |       inst                                     |     0.103 |
 |   alu                                          |    <0.001 |
-|   decoder                                      |     0.002 |
+|   decoder                                      |     0.003 |
 |   dmemory                                      |     0.003 |
 |     ram                                        |     0.003 |
 |       U0                                       |     0.003 |
@@ -189,12 +189,12 @@ Table of Contents
 |                 prim_init.ram                  |    <0.001 |
 |               ramloop[9].ram.r                 |    <0.001 |
 |                 prim_init.ram                  |    <0.001 |
-|   ifetch                                       |     0.011 |
-|     instmem                                    |     0.005 |
-|       U0                                       |     0.005 |
-|         inst_blk_mem_gen                       |     0.005 |
-|           gnbram.gnativebmg.native_blk_mem_gen |     0.005 |
-|             valid.cstr                         |     0.005 |
+|   ifetch                                       |     0.010 |
+|     instmem                                    |     0.004 |
+|       U0                                       |     0.004 |
+|         inst_blk_mem_gen                       |     0.004 |
+|           gnbram.gnativebmg.native_blk_mem_gen |     0.004 |
+|             valid.cstr                         |     0.004 |
 |               bindec_a.bindec_inst_a           |    <0.001 |
 |               has_mux_a.A                      |     0.002 |
 |               ramloop[0].ram.r                 |    <0.001 |
@@ -227,6 +227,7 @@ Table of Contents
 |                 prim_init.ram                  |    <0.001 |
 |               ramloop[9].ram.r                 |    <0.001 |
 |                 prim_init.ram                  |    <0.001 |
+|   ioWrite                                      |    <0.001 |
 |   memOrio                                      |    <0.001 |
 +------------------------------------------------+-----------+
 
