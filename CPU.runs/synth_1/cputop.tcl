@@ -16,7 +16,6 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param xicom.use_bs_reader 1
 create_project -in_memory -part xc7a100tfgg484-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -28,6 +27,7 @@ set_property parent.project_path D:/VivadoProCS202/CPU/CPU.xpr [current_project]
 set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
+set_property ip_repo_paths d:/VivadoProCS202/CPU/SEU_CSE_507_user_uart_bmpg_1.3 [current_project]
 set_property ip_output_repo d:/VivadoProCS202/CPU/CPU.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 add_files D:/VivadoProCS202/CPU/CPU.srcs/sources_1/ip/prgrom/prgmip32.coe
@@ -41,7 +41,6 @@ read_verilog -library xil_defaultlib {
   D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/dmemory32.v
   D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/executs32.v
   D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/ioWrite32.v
-  D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/key_debounce.v
   D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v
 }
 read_ip -quiet D:/VivadoProCS202/CPU/CPU.srcs/sources_1/ip/RAM/RAM.xci

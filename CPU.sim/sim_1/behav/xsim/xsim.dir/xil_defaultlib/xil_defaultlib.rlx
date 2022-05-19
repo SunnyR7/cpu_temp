@@ -3,7 +3,7 @@
 Dec 15 2017
 21:07:18
 D:/VivadoProCS202/CPU/CPU.sim/sim_1/behav/xsim/glbl.v,1513215259,verilog,,,,glbl,,,,,,,,
-D:/VivadoProCS202/CPU/CPU.srcs/sim_1/new/test1.v,1652959715,verilog,,,,test1,,,../../../../CPU.srcs/sources_1/ip/cpuclk,,,,,
+D:/VivadoProCS202/CPU/CPU.srcs/sim_1/new/test1.v,1652967967,verilog,,,,test1,,,../../../../CPU.srcs/sources_1/ip/cpuclk,,,,,
 D:/VivadoProCS202/CPU/CPU.srcs/sources_1/ip/RAM/sim/RAM.v,1652958549,verilog,,D:/VivadoProCS202/CPU/CPU.srcs/sources_1/ip/prgrom/sim/prgrom.v,,RAM,,,../../../../CPU.srcs/sources_1/ip/cpuclk,,,,,
 D:/VivadoProCS202/CPU/CPU.srcs/sources_1/ip/cpuclk/cpuclk.v,1652866035,verilog,,D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/Ifetc32.v,,cpuclk,,,../../../../CPU.srcs/sources_1/ip/cpuclk,,,,,
 D:/VivadoProCS202/CPU/CPU.srcs/sources_1/ip/cpuclk/cpuclk_clk_wiz.v,1652866035,verilog,,D:/VivadoProCS202/CPU/CPU.srcs/sources_1/ip/cpuclk/cpuclk.v,,cpuclk_clk_wiz,,,../../../../CPU.srcs/sources_1/ip/cpuclk,,,,,
@@ -12,7 +12,7 @@ D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/Ifetc32.v,1652875100,verilog,,D:/Vi
 D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/MemOrIO.v,1652891077,verilog,,D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/control32.v,,MemOrIO,,,../../../../CPU.srcs/sources_1/ip/cpuclk,,,,,
 D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/control32.v,1652875133,verilog,,D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cpuclock.v,,control32,,,../../../../CPU.srcs/sources_1/ip/cpuclk,,,,,
 D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cpuclock.v,1652875124,verilog,,D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v,,cpuclock,,,../../../../CPU.srcs/sources_1/ip/cpuclk,,,,,
-D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v,1652954240,verilog,,D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/decode32.v,,cputop,,,../../../../CPU.srcs/sources_1/ip/cpuclk,,,,,
+D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v,1652967834,verilog,,D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/decode32.v,,cputop,,,../../../../CPU.srcs/sources_1/ip/cpuclk,,,,,
 D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/decode32.v,1652875085,verilog,,D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/dmemory32.v,,decode32,,,../../../../CPU.srcs/sources_1/ip/cpuclk,,,,,
 D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/dmemory32.v,1652875113,verilog,,D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/executs32.v,,dmemory32,,,../../../../CPU.srcs/sources_1/ip/cpuclk,,,,,
 D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/executs32.v,1652875107,verilog,,D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/ioWrite32.v,,executs32,,,../../../../CPU.srcs/sources_1/ip/cpuclk,,,,,
