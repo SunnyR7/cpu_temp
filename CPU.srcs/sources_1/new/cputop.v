@@ -1,14 +1,30 @@
 `timescale 1ns / 1ps
 
 
-module cputop (clk,switch,led);
+module cputop (clk,switch,led,rx,tx);
     input clk;
     // input confirm;
     input[23:0] switch;
     output[23:0] led;
+    input rx;
+    output tx;
+    //input是uart接口传入，这个每次传1bit
+    //output是cpu告诉另一边接收结束了
 
+    //reset信号是拨码开关从左往右数第7个
+    //开始uart通信时拨码开关从左往右数第8个
+    //上面这两个表示状态的信号可以变成按键，暂时是弄的拨码开关
+    //就可以弄成按一下是reset，再按一下是正常状态，可以是reset不变，外面弄一个按一下reset取反一次的
+
+    //使用了两个拨码开关表示状态
+    //从左往右数第7个 和 从左往右数第8个
+    //从左往右数第8个拨上去的时候 是uart通信模式，同时进行rst
+    //当从两个开关任意一个拨上去的都是rst状态
+    //只有当两个开关都拨下来才是正常工作状态
     wire rst;
-    assign rst=switch[17];
+    assign rst=switch[17]|switch[16];
+    wire start_pg;
+    assign start_pg=switch[16];
     
     //Ifetch
     wire[31:0] Instruction;
@@ -54,6 +70,7 @@ module cputop (clk,switch,led);
 
     //clock
     wire clock;
+    wire clock_uart;
 
     //MemOrIO
     wire LEDCtrl;
@@ -61,9 +78,27 @@ module cputop (clk,switch,led);
     wire [31:0] read_dataFromMemoryOrIo;
     wire [31:0] write_dataToMemoryOrIo;
 
-    cpuclock CLK(
-        .clkin(clk),
-        .clkout(clock)
+
+    //uart
+    // UART Programmer Pinouts
+    wire upg_clk_o;
+    wire upg_wen_o; //Uart write out enable
+    wire upg_done_o; //Uart rx data have done
+    //data to which memory unit of program_rom/dmemory32
+    wire [14:0] upg_adr_o;
+    //data to program_rom or dmemory32
+    wire [31:0] upg_dat_o;
+
+    uart uart(
+        .upg_clk_i(clock_uart),
+        .upg_rst_i(~start_pg),
+        .upg_rx_i(rx),
+        .upg_clk_o(upg_clk_o),
+        .upg_wen_o(upg_wen_o),
+        .upg_adr_o(upg_adr_o),
+        .upg_dat_o(upg_dat_o),
+        .upg_done_o(upg_done_o),
+        .upg_tx_o(tx)
     );
 
     Ifetc32 ifetch(
@@ -79,8 +114,35 @@ module cputop (clk,switch,led);
         .Zero(Zero),
         .clock(clock),
         .reset(rst),
-        .link_addr(link_addr)
+        .link_addr(link_addr),
+        .upg_rst_i(~start_pg),
+        .upg_clk_i(upg_clk_o),
+        .upg_wen_i(upg_wen_o& (!upg_adr_o[14])),
+        .upg_adr_i(upg_adr_o[13:0]),
+        .upg_dat_i(upg_dat_o),
+        .upg_done_i(upg_done_o)
     );
+
+    dmemory32 dmemory(
+        .clock(clock),
+        .memWrite(MemWrite),
+        .address(ALU_Result),
+        .writeData(read_data_2),
+        .readData(read_dataFromMemory),
+        .upg_rst_i(~start_pg),
+        .upg_clk_i(upg_clk_o),
+        .upg_wen_i(upg_wen_o& upg_adr_o[14]),
+        .upg_adr_i(upg_adr_o[13:0]),
+        .upg_dat_i(upg_dat_o),
+        .upg_done_i(upg_done_o)
+    );
+
+    cpuclock CLK(
+        .clkin(clk),
+        .clkout1(clock),
+        .clkout2(clock_uart)
+    );
+
 
     control32 controller(
             .Opcode(Instruction[31:26]), 
@@ -120,14 +182,6 @@ module cputop (clk,switch,led);
         .ALU_Result(ALU_Result),
         .Addr_Result(Addr_Result),
         .PC_plus_4(branch_base_addr)
-    );
-
-    dmemory32 dmemory(
-        .clock(clock),
-        .memWrite(MemWrite),
-        .address(ALU_Result),
-        .writeData(read_data_2),
-        .readData(read_dataFromMemory)
     );
 
     decode32 decoder(

@@ -16,7 +16,6 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param xicom.use_bs_reader 1
 set_param project.vivado.isBlockSynthRun true
 set_msg_config -msgmgr_mode ooc_run
 create_project -in_memory -part xc7a100tfgg484-1
@@ -30,6 +29,7 @@ set_property parent.project_path D:/VivadoProCS202/CPU/CPU.xpr [current_project]
 set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
+set_property ip_repo_paths d:/VivadoProCS202/CPU/SEU_CSE_507_user_uart_bmpg_1.3 [current_project]
 set_property ip_output_repo d:/VivadoProCS202/CPU/CPU.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_ip -quiet D:/VivadoProCS202/CPU/CPU.srcs/sources_1/ip/RAM/RAM.xci

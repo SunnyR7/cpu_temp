@@ -54,6 +54,8 @@ set_property used_in_implementation false [get_files -all d:/VivadoProCS202/CPU/
 set_property used_in_implementation false [get_files -all d:/VivadoProCS202/CPU/CPU.srcs/sources_1/ip/cpuclk/cpuclk.xdc]
 set_property used_in_implementation false [get_files -all d:/VivadoProCS202/CPU/CPU.srcs/sources_1/ip/cpuclk/cpuclk_ooc.xdc]
 
+read_ip -quiet D:/VivadoProCS202/CPU/CPU.srcs/sources_1/ip/uart/uart.xci
+
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
 # design are intentionally left as such for best results. Dcp files will be

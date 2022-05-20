@@ -1,6 +1,8 @@
 set_property IOSTANDARD LVCMOS33 [get_ports {clk}]
 set_property PACKAGE_PIN Y18 [get_ports {clk}]
 
+set_property -dict {IOSTANDARD LVCMOS33 PACKAGE_PIN Y19} [get_ports rx]
+set_property -dict {IOSTANDARD LVCMOS33 PACKAGE_PIN V18} [get_ports tx]
 
 # set_property IOSTANDARD LVCMOS33 [get_ports {confirm}]
 # set_property PACKAGE_PIN P4 [get_ports {confirm}]

@@ -1,6 +1,7 @@
 `timescale 1ns / 1ps
 
-module Ifetc32(Instruction,branch_base_addr,Addr_result,Read_data_1,Branch,nBranch,Jmp,Jal,Jr,Zero,clock,reset,link_addr);
+module Ifetc32(Instruction,branch_base_addr,Addr_result,Read_data_1,Branch,nBranch,Jmp,Jal,Jr,Zero,clock,reset,link_addr,
+                upg_rst_i,upg_clk_i,upg_wen_i,upg_adr_i,upg_dat_i,upg_done_i);
     output[31:0] Instruction;			// 根据PC的值从存放指令的prgrom中取出的指令
     output[31:0] branch_base_addr;      // 对于有条件跳转类的指令而言，该值为(pc+4)送往ALU
     input[31:0]  Addr_result;            // 来自ALU,为ALU计算出的跳转地址
@@ -13,13 +14,23 @@ module Ifetc32(Instruction,branch_base_addr,Addr_result,Read_data_1,Branch,nBran
     input        Zero;                  //来自ALU，Zero为1表示两个值相等，反之表示不相等
     input        clock,reset;           //时钟与复位,复位信号用于给PC赋初始值，复位信号高电平有效
     output reg [31:0]link_addr;             // JAL指令专用的PC+4
+    input upg_rst_i; // UPG reset (Active High)
+    input upg_clk_i; // UPG ram_clk_i (10MHz)
+    input upg_wen_i; // UPG write enable
+    input [13:0] upg_adr_i; // UPG write address
+    input [31:0] upg_dat_i; // UPG write data
+    input upg_done_i; // 1 if programming is finished
     
+    wire kickOff = upg_rst_i | (~upg_rst_i & upg_done_i);
     reg[31:0] PC,Next_PC;
     prgrom instmem(
-    .clka(clock),
-    .addra(PC[15:2]),
+    .clka(kickOff ?clock:upg_clk_i),
+    .wea (kickOff ? 1'b0: upg_wen_i),
+    .addra(kickOff ?PC[15:2]:upg_adr_i),
+    .dina (kickOff ? 32'h00000000 : upg_dat_i),
     .douta(Instruction)
     );
+
     assign branch_base_addr = PC + 4;
     always @* begin
         if((Branch==1'b1 && Zero == 1'b1) ||(nBranch == 1'b1 && Zero == 1'b0))

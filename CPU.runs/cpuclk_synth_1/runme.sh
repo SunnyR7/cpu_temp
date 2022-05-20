@@ -11,9 +11,9 @@ echo "Please update the PATH and LD_LIBRARY_PATH variables below, before executi
 exit
 
 if [ -z "$PATH" ]; then
-  PATH=D:/Vivado/2017.4/ids_lite/ISE/bin/nt64;D:/Vivado/2017.4/ids_lite/ISE/lib/nt64:D:/Vivado/2017.4/bin
+  PATH=D:/software/vivado/download/Vivado/2017.4/ids_lite/ISE/bin/nt64;D:/software/vivado/download/Vivado/2017.4/ids_lite/ISE/lib/nt64:D:/software/vivado/download/Vivado/2017.4/bin
 else
-  PATH=D:/Vivado/2017.4/ids_lite/ISE/bin/nt64;D:/Vivado/2017.4/ids_lite/ISE/lib/nt64:D:/Vivado/2017.4/bin:$PATH
+  PATH=D:/software/vivado/download/Vivado/2017.4/ids_lite/ISE/bin/nt64;D:/software/vivado/download/Vivado/2017.4/ids_lite/ISE/lib/nt64:D:/software/vivado/download/Vivado/2017.4/bin:$PATH
 fi
 export PATH
 
@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/Lenovo/CPU/CPU.runs/cpuclk_synth_1'
+HD_PWD='D:/VivadoProCS202/CPU/CPU.runs/cpuclk_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
