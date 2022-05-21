@@ -1,7 +1,7 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-// Date        : Thu May 19 22:22:41 2022
+// Date        : Sat May 21 17:38:42 2022
 // Host        : LAPTOP-8IF7AABH running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim D:/VivadoProCS202/CPU/CPU.srcs/sources_1/ip/cpuclk/cpuclk_sim_netlist.v
 // Design      : cpuclk
@@ -15,28 +15,34 @@
 module cpuclk
    (clk_out1,
     clk_out2,
+    clk_out3,
     clk_in1);
   output clk_out1;
   output clk_out2;
+  output clk_out3;
   input clk_in1;
 
   (* IBUF_LOW_PWR *) wire clk_in1;
   wire clk_out1;
   wire clk_out2;
+  wire clk_out3;
 
   cpuclk_cpuclk_clk_wiz inst
        (.clk_in1(clk_in1),
         .clk_out1(clk_out1),
-        .clk_out2(clk_out2));
+        .clk_out2(clk_out2),
+        .clk_out3(clk_out3));
 endmodule
 
 (* ORIG_REF_NAME = "cpuclk_clk_wiz" *) 
 module cpuclk_cpuclk_clk_wiz
    (clk_out1,
     clk_out2,
+    clk_out3,
     clk_in1);
   output clk_out1;
   output clk_out2;
+  output clk_out3;
   input clk_in1;
 
   wire clk_in1;
@@ -45,9 +51,10 @@ module cpuclk_cpuclk_clk_wiz
   wire clk_out1_cpuclk;
   wire clk_out2;
   wire clk_out2_cpuclk;
+  wire clk_out3;
+  wire clk_out3_cpuclk;
   wire clkfbout_buf_cpuclk;
   wire clkfbout_cpuclk;
-  wire NLW_plle2_adv_inst_CLKOUT2_UNCONNECTED;
   wire NLW_plle2_adv_inst_CLKOUT3_UNCONNECTED;
   wire NLW_plle2_adv_inst_CLKOUT4_UNCONNECTED;
   wire NLW_plle2_adv_inst_CLKOUT5_UNCONNECTED;
@@ -77,19 +84,23 @@ module cpuclk_cpuclk_clk_wiz
        (.I(clk_out2_cpuclk),
         .O(clk_out2));
   (* BOX_TYPE = "PRIMITIVE" *) 
+  BUFG clkout3_buf
+       (.I(clk_out3_cpuclk),
+        .O(clk_out3));
+  (* BOX_TYPE = "PRIMITIVE" *) 
   PLLE2_ADV #(
     .BANDWIDTH("OPTIMIZED"),
-    .CLKFBOUT_MULT(46),
+    .CLKFBOUT_MULT(9),
     .CLKFBOUT_PHASE(0.000000),
     .CLKIN1_PERIOD(10.000000),
     .CLKIN2_PERIOD(0.000000),
-    .CLKOUT0_DIVIDE(40),
+    .CLKOUT0_DIVIDE(39),
     .CLKOUT0_DUTY_CYCLE(0.500000),
     .CLKOUT0_PHASE(0.000000),
-    .CLKOUT1_DIVIDE(92),
+    .CLKOUT1_DIVIDE(9),
     .CLKOUT1_DUTY_CYCLE(0.500000),
     .CLKOUT1_PHASE(0.000000),
-    .CLKOUT2_DIVIDE(1),
+    .CLKOUT2_DIVIDE(90),
     .CLKOUT2_DUTY_CYCLE(0.500000),
     .CLKOUT2_PHASE(0.000000),
     .CLKOUT3_DIVIDE(1),
@@ -102,7 +113,7 @@ module cpuclk_cpuclk_clk_wiz
     .CLKOUT5_DUTY_CYCLE(0.500000),
     .CLKOUT5_PHASE(0.000000),
     .COMPENSATION("ZHOLD"),
-    .DIVCLK_DIVIDE(5),
+    .DIVCLK_DIVIDE(1),
     .IS_CLKINSEL_INVERTED(1'b0),
     .IS_PWRDWN_INVERTED(1'b0),
     .IS_RST_INVERTED(1'b0),
@@ -117,7 +128,7 @@ module cpuclk_cpuclk_clk_wiz
         .CLKINSEL(1'b1),
         .CLKOUT0(clk_out1_cpuclk),
         .CLKOUT1(clk_out2_cpuclk),
-        .CLKOUT2(NLW_plle2_adv_inst_CLKOUT2_UNCONNECTED),
+        .CLKOUT2(clk_out3_cpuclk),
         .CLKOUT3(NLW_plle2_adv_inst_CLKOUT3_UNCONNECTED),
         .CLKOUT4(NLW_plle2_adv_inst_CLKOUT4_UNCONNECTED),
         .CLKOUT5(NLW_plle2_adv_inst_CLKOUT5_UNCONNECTED),

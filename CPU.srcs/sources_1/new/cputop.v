@@ -1,10 +1,12 @@
 `timescale 1ns / 1ps
 
 
-module cputop (clk,switch,led,rx,tx);
+module cputop (clk,switch,reset,uart_stage,led,rx,tx);
     input clk;
     // input confirm;
     input[23:0] switch;
+    input reset;
+    input uart_stage;
     output[23:0] led;
     input rx;
     output tx;
@@ -22,9 +24,11 @@ module cputop (clk,switch,led,rx,tx);
     //当从两个开关任意一个拨上去的都是rst状态
     //只有当两个开关都拨下来才是正常工作状态
     wire rst;
-    assign rst=switch[17]|switch[16];
     wire start_pg;
-    assign start_pg=switch[16];
+    // assign start_pg=switch[16];
+    // assign rst=switch[17]|switch[16];
+    //更新：用两个按键调整状态，删去原来用拨码开关调整状态的方式
+    //同时加入最左边的两个led灯表示状态
     
     //Ifetch
     wire[31:0] Instruction;
@@ -71,6 +75,7 @@ module cputop (clk,switch,led,rx,tx);
     //clock
     wire clock;
     wire clock_uart;
+    wire clock_100;
 
     //MemOrIO
     wire LEDCtrl;
@@ -89,6 +94,13 @@ module cputop (clk,switch,led,rx,tx);
     //data to program_rom or dmemory32
     wire [31:0] upg_dat_o;
 
+    stage_control stage_controll(
+        .clk(clock_100),
+        .reset(reset),
+        .uart_stage(uart_stage),
+        .rst(rst),
+        .start_pg(start_pg)
+    );
     uart uart(
         .upg_clk_i(clock_uart),
         .upg_rst_i(~start_pg),
@@ -137,12 +149,13 @@ module cputop (clk,switch,led,rx,tx);
         .upg_done_i(upg_done_o)
     );
 
-    cpuclock CLK(
-        .clkin(clk),
-        .clkout1(clock),
-        .clkout2(clock_uart)
+    
+    cpuclk clk_ip(
+        .clk_in1(clk),
+        .clk_out1(clock),
+        .clk_out2(clock_100),
+        .clk_out3(clock_uart)
     );
-
 
     control32 controller(
             .Opcode(Instruction[31:26]), 
@@ -218,11 +231,12 @@ module cputop (clk,switch,led,rx,tx);
 
 
     ioWrite32 ioWrite(
-        .writeData(write_dataToMemoryOrIo[23:0]),
+        .writeData({rst,start_pg,write_dataToMemoryOrIo[21:0]}),
         .clock(clock),
         .reset(rst),
         .ioWrite(IOWrite),
-        .dataToio(led)
+        .stage_io(led[23:22]),
+        .dataToio(led[21:0])
     );
 
 endmodule

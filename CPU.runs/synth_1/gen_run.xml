@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tfgg484-1" LaunchTime="1653038247">
+<GenRun Id="synth_1" LaunchPart="xc7a100tfgg484-1" LaunchTime="1653126140">
   <File Type="PA-TCL" Name="cputop.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="cputop_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="cputop_reports.tcl"/>
   <File Type="RDS-RDS" Name="cputop.vds"/>
   <File Type="RDS-UTIL" Name="cputop_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="cputop_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="cputop.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="cputop_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="cputop_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/Ifetc32.v">
@@ -23,13 +26,6 @@
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/new/control32.v">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/cpuclock.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -64,16 +60,22 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/cputop.v">
+    <File Path="$PSRCDIR/sources_1/new/key_debounce.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/key_debounce.v">
+    <File Path="$PSRCDIR/sources_1/new/stage_control.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/cputop.v">
+      <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -113,8 +115,8 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017"/>
     <Step Id="synth_design"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="RAM"/>
   <BlockFileSet Type="BlockSrcs" Name="uart"/>
+  <BlockFileSet Type="BlockSrcs" Name="RAM"/>
   <BlockFileSet Type="BlockSrcs" Name="prgrom"/>
   <BlockFileSet Type="BlockSrcs" Name="cpuclk"/>
 </GenRun>

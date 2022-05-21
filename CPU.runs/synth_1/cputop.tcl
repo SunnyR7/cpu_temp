@@ -16,6 +16,7 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_param xicom.use_bs_reader 1
 create_project -in_memory -part xc7a100tfgg484-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -36,11 +37,12 @@ read_verilog -library xil_defaultlib {
   D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/Ifetc32.v
   D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/MemOrIO.v
   D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/control32.v
-  D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cpuclock.v
   D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/decode32.v
   D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/dmemory32.v
   D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/executs32.v
   D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/ioWrite32.v
+  D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/key_debounce.v
+  D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/stage_control.v
   D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v
 }
 read_ip -quiet D:/VivadoProCS202/CPU/CPU.srcs/sources_1/ip/RAM/RAM.xci
