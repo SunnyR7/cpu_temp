@@ -14,8 +14,8 @@ module decode32(read_data_1,read_data_2,Instruction,mem_data,ALU_result,
     output reg [31:0] Sign_extend;               // 扩展后的32位立即数
     input		 clock,reset;                // 时钟和复位
     input[31:0]  opcplus4;                 // JAL指令专用的PC+4
-    input [31:0] hi_from_ALU;
-    input [31:0] lo_from_ALU;
+    input [31:0] hi_from_ALU;              //alu计算出来的写入给hi的值
+    input [31:0] lo_from_ALU;               //alu计算出来的写入给hi的值
 
     reg[31:0] registers[0:31];//32个32bit的寄存器
 

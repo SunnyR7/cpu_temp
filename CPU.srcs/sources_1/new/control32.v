@@ -3,7 +3,7 @@
 module control32(Opcode, Function_opcode, Jr, RegDST, ALUSrc, MemorIOtoReg, RegWrite, MemWrite, Branch, nBranch, Jmp, Jal, I_format, Sftmd, ALUOp,Alu_resultHigh, MemRead, IORead, IOWrite);
     input[5:0]   Opcode;            // 来自IFetch模块的指令高6bit, instruction[31..26]
     input[5:0]   Function_opcode;  	// 来自IFetch模块的指令低6bit, 用于区分r-类型中的指令, instructions[5..0]
-    input[21:0]  Alu_resultHigh;
+    input[21:0]  Alu_resultHigh;   //从alu计算的地址接入，地址的高22bit位
     output       Jr;         	 // 为1表明当前指令是jr, 为0表示当前指令不是jr
     output       RegDST;          // 为1表明目的寄存器是rd, 否则目的寄存器是rt
     output       ALUSrc;          // 为1表明第二个操作数（ALU中的Binput）是立即数（beq, bne除外）, 为0时表示第二个操作数来自寄存器
@@ -17,9 +17,9 @@ module control32(Opcode, Function_opcode, Jr, RegDST, ALUSrc, MemorIOtoReg, RegW
     output       I_format;      // 为1表明该指令是除beq, bne, LW, SW之外的其他I-类型指令
     output       Sftmd;         // 为1表明是移位指令, 为0表明不是移位指令
     output[1:0]  ALUOp;        // 是R-类型或I_format=1时位1（高bit位）为1,  beq、bne指令则位0（低bit位）为1
-    output MemRead;
-    output IORead;
-    output IOWrite;
+    output MemRead;//为1表明要从mem读入 active high
+    output IORead;//为1表明要从io读入 active high
+    output IOWrite;//为1表明要写入io active high
 
 
 wire R_format = (Opcode == 6'b000000)? 1'b1: 1'b0;

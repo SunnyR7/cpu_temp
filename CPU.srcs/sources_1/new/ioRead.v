@@ -2,16 +2,16 @@
 
 module ioRead(
     input clk,
-    output  [15:0]out_value_right,
-    output  [2:0]out_value_left,
-    input [23:0]sw,
-    input key_backspace,
-    input[3:0] row, output  [3:0] col_n,
-    output [7:0] tube_char, output [7:0] tube_switch
+    output  [15:0]out_value_right,//io经过多路选择器后传出的值
+    output  [2:0]out_value_left,//io经过多路选择器后传出的值
+    input [23:0]sw,//拨码开关传进来的值，sw[20]用来表示选择io. 高电平为小键盘，低电平为拨码开关
+    input key_backspace,//退格按键
+    input[3:0] row, output  [3:0] col_n,//小键盘
+    output [7:0] tube_char, output [7:0] tube_switch //七段数码管
 );
 
-wire backspace_key_value1;
-key_debounce key1(clk,key_backspace,backspace_key_value1);
+wire backspace_key_value;
+key_debounce key1(clk,key_backspace,backspace_key_value);
 
 reg[31:0] num=32'b10111111_10111111_10111111_10111111;
 
@@ -20,7 +20,7 @@ wire key_pressed_flag;
 wire [7:0] key_seg;
 keyboard key (clk,~sw[20],row,col_n,key_pressed_flag,key_seg);
 
-reg[31:0] d;
+reg[31:0] num_temp;//暂时表示状态的寄存器
 
 always @(posedge clk)
 begin
@@ -28,17 +28,17 @@ begin
     begin
     num<=32'b10111111_10111111_10111111_10111111;
     end
-    else if (backspace_key_value1) 
+    else if (backspace_key_value) 
     begin
-        num<={8'b10111111,d[31:8]};
+        num<={8'b10111111,num_temp[31:8]};
     end
     else if(key_pressed_flag)
     begin
-        num<={d[23:0],~key_seg};
+        num<={num_temp[23:0],~key_seg};
     end
     else
     begin
-    d<=num;
+    num_temp<=num;
     end
 end
 
@@ -84,7 +84,7 @@ begin
     begin
         value_from_tube<=16'b0000_0000_0000_0000;
     end
-    else if (backspace_key_value1) 
+    else if (backspace_key_value) 
     begin
         value_from_tube<={4'b0000,value_temp[15:4]};
     end

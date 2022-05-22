@@ -2,10 +2,10 @@
 
 module dmemory32(readData,address,writeData,memWrite,clock,upg_rst_i,upg_clk_i,upg_wen_i,upg_adr_i,upg_dat_i,upg_done_i);
 input clock;
-input memWrite;
-input [31:0] address;
-input[31:0] writeData;
-output[31:0] readData;
+input memWrite;//是否进行写寄存器的操作（active high）
+input [31:0] address;//来自ALU的计算地址ALU_result
+input[31:0] writeData;//decoder读出的read_data_2
+output[31:0] readData;//dmem读出的数据
 input upg_rst_i; // UPG reset (Active High)
 input upg_clk_i; // UPG ram_clk_i (10MHz)
 input upg_wen_i; // UPG write enable

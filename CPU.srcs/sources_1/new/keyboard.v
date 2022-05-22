@@ -3,7 +3,7 @@
 
 module keyboard(
     input clk,
-    input rst_n,//enable
+    input rst_n,//enable,低电平有效
     input[3:0] row, output  reg [3:0] col,
     output reg key_pressed_flag, // 键盘按下标志
     output reg [7:0]key_seg//翻译成7段数码管的值

@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-| Date         : Mon May 23 01:31:26 2022
+| Date         : Mon May 23 05:07:06 2022
 | Host         : LAPTOP-8IF7AABH running 64-bit major release  (build 9200)
 | Command      : report_utilization -file cputop_utilization_placed.rpt -pb cputop_utilization_placed.pb
 | Design       : cputop
@@ -31,8 +31,8 @@ Table of Contents
 +----------------------------+------+-------+-----------+-------+
 |          Site Type         | Used | Fixed | Available | Util% |
 +----------------------------+------+-------+-----------+-------+
-| Slice LUTs                 | 7760 |     0 |     63400 | 12.24 |
-|   LUT as Logic             | 7750 |     0 |     63400 | 12.22 |
+| Slice LUTs                 | 7762 |     0 |     63400 | 12.24 |
+|   LUT as Logic             | 7752 |     0 |     63400 | 12.23 |
 |   LUT as Memory            |   10 |     0 |     19000 |  0.05 |
 |     LUT as Distributed RAM |    0 |     0 |           |       |
 |     LUT as Shift Register  |   10 |     0 |           |       |
@@ -69,23 +69,23 @@ Table of Contents
 +-------------------------------------------+------+-------+-----------+-------+
 |                 Site Type                 | Used | Fixed | Available | Util% |
 +-------------------------------------------+------+-------+-----------+-------+
-| Slice                                     | 2269 |     0 |     15850 | 14.32 |
-|   SLICEL                                  | 1567 |     0 |           |       |
-|   SLICEM                                  |  702 |     0 |           |       |
-| LUT as Logic                              | 7750 |     0 |     63400 | 12.22 |
+| Slice                                     | 2285 |     0 |     15850 | 14.42 |
+|   SLICEL                                  | 1608 |     0 |           |       |
+|   SLICEM                                  |  677 |     0 |           |       |
+| LUT as Logic                              | 7752 |     0 |     63400 | 12.23 |
 |   using O5 output only                    |    0 |       |           |       |
-|   using O6 output only                    | 6867 |       |           |       |
-|   using O5 and O6                         |  883 |       |           |       |
+|   using O6 output only                    | 6871 |       |           |       |
+|   using O5 and O6                         |  881 |       |           |       |
 | LUT as Memory                             |   10 |     0 |     19000 |  0.05 |
 |   LUT as Distributed RAM                  |    0 |     0 |           |       |
 |   LUT as Shift Register                   |   10 |     0 |           |       |
 |     using O5 output only                  |    2 |       |           |       |
 |     using O6 output only                  |    1 |       |           |       |
 |     using O5 and O6                       |    7 |       |           |       |
-| LUT Flip Flop Pairs                       | 1430 |     0 |     63400 |  2.26 |
+| LUT Flip Flop Pairs                       | 1415 |     0 |     63400 |  2.23 |
 |   fully used LUT-FF pairs                 |   67 |       |           |       |
-|   LUT-FF pairs with one unused LUT output | 1332 |       |           |       |
-|   LUT-FF pairs with one unused Flip Flop  | 1353 |       |           |       |
+|   LUT-FF pairs with one unused LUT output | 1327 |       |           |       |
+|   LUT-FF pairs with one unused Flip Flop  | 1337 |       |           |       |
 | Unique Control Sets                       |  107 |       |           |       |
 +-------------------------------------------+------+-------+-----------+-------+
 * Note: Review the Control Sets Report for more information regarding control sets.

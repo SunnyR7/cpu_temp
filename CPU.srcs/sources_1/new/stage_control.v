@@ -2,10 +2,10 @@
 
 module stage_control(clk,reset,uart_stage,rst,start_pg);
 input clk;
-input reset;
-input uart_stage;
-output reg rst=1'b0;
-output reg start_pg=1'b0;
+input reset;//高电平有效
+input uart_stage;//高电平有效
+output reg rst=1'b0;//经过处理后传出的reset值
+output reg start_pg=1'b0;//经过处理后传出的表示uart状态的值
 
 wire rst_key_value;
 wire uart_key_value;

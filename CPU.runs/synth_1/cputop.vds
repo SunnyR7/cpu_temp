@@ -2,8 +2,8 @@
 # Vivado v2017.4 (64-bit)
 # SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
 # IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
-# Start of session at: Mon May 23 01:28:03 2022
-# Process ID: 30568
+# Start of session at: Mon May 23 05:02:44 2022
+# Process ID: 29948
 # Current directory: D:/VivadoProCS202/CPU/CPU.runs/synth_1
 # Command line: vivado.exe -log cputop.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source cputop.tcl
 # Log file: D:/VivadoProCS202/CPU/CPU.runs/synth_1/cputop.vds
@@ -15,19 +15,23 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 21904 
-WARNING: [Synth 8-992] rst is already implicitly declared earlier [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:48]
+INFO: Helper process launched with PID 12040 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 356.398 ; gain = 114.668
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 343.949 ; gain = 103.031
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'cputop' [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:1]
-INFO: [Synth 8-638] synthesizing module 'ioRead' [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/ioRead.v:3]
-INFO: [Synth 8-638] synthesizing module 'key_debounce' [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/key_debounce.v:2]
-INFO: [Synth 8-256] done synthesizing module 'key_debounce' (1#1) [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/key_debounce.v:2]
-INFO: [Synth 8-638] synthesizing module 'tubeDriver' [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/tubeDriver.v:1]
 INFO: [Synth 8-638] synthesizing module 'frequency' [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/frequency.v:4]
+	Parameter dividedBy bound to: 10 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'frequency' (1#1) [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/frequency.v:4]
+INFO: [Synth 8-638] synthesizing module 'cpuclk' [D:/VivadoProCS202/CPU/CPU.runs/synth_1/.Xil/Vivado-29948-LAPTOP-8IF7AABH/realtime/cpuclk_stub.v:5]
+INFO: [Synth 8-256] done synthesizing module 'cpuclk' (2#1) [D:/VivadoProCS202/CPU/CPU.runs/synth_1/.Xil/Vivado-29948-LAPTOP-8IF7AABH/realtime/cpuclk_stub.v:5]
+INFO: [Synth 8-638] synthesizing module 'key_debounce' [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/key_debounce.v:2]
+INFO: [Synth 8-256] done synthesizing module 'key_debounce' (3#1) [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/key_debounce.v:2]
+INFO: [Synth 8-638] synthesizing module 'ioRead' [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/ioRead.v:3]
+INFO: [Synth 8-638] synthesizing module 'tubeDriver' [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/tubeDriver.v:1]
+INFO: [Synth 8-638] synthesizing module 'frequency__parameterized0' [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/frequency.v:4]
 	Parameter dividedBy bound to: 200000 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'frequency' (2#1) [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/frequency.v:4]
+INFO: [Synth 8-256] done synthesizing module 'frequency__parameterized0' (3#1) [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/frequency.v:4]
 INFO: [Synth 8-226] default block is never used [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/tubeDriver.v:56]
 INFO: [Synth 8-226] default block is never used [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/tubeDriver.v:71]
 WARNING: [Synth 8-567] referenced signal 'text71' should be on the sensitivity list [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/tubeDriver.v:70]
@@ -38,7 +42,7 @@ WARNING: [Synth 8-567] referenced signal 'text31' should be on the sensitivity l
 WARNING: [Synth 8-567] referenced signal 'text21' should be on the sensitivity list [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/tubeDriver.v:70]
 WARNING: [Synth 8-567] referenced signal 'text11' should be on the sensitivity list [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/tubeDriver.v:70]
 WARNING: [Synth 8-567] referenced signal 'text01' should be on the sensitivity list [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/tubeDriver.v:70]
-INFO: [Synth 8-256] done synthesizing module 'tubeDriver' (3#1) [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/tubeDriver.v:1]
+INFO: [Synth 8-256] done synthesizing module 'tubeDriver' (4#1) [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/tubeDriver.v:1]
 INFO: [Synth 8-638] synthesizing module 'keyboard' [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/keyboard.v:4]
 	Parameter NO_KEY_PRESSED bound to: 6'b000001 
 	Parameter SCAN_COL0 bound to: 6'b000010 
@@ -51,25 +55,20 @@ INFO: [Synth 8-155] case statement is not full and has no default [D:/VivadoProC
 INFO: [Synth 8-155] case statement is not full and has no default [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/keyboard.v:113]
 WARNING: [Synth 8-5788] Register col_val_reg in module keyboard is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/keyboard.v:99]
 WARNING: [Synth 8-5788] Register row_val_reg in module keyboard is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/keyboard.v:100]
-INFO: [Synth 8-256] done synthesizing module 'keyboard' (4#1) [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/keyboard.v:4]
+INFO: [Synth 8-256] done synthesizing module 'keyboard' (5#1) [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/keyboard.v:4]
 INFO: [Synth 8-155] case statement is not full and has no default [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/ioRead.v:57]
-INFO: [Synth 8-256] done synthesizing module 'ioRead' (5#1) [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/ioRead.v:3]
-INFO: [Synth 8-638] synthesizing module 'frequency__parameterized0' [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/frequency.v:4]
-	Parameter dividedBy bound to: 10 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'frequency__parameterized0' (5#1) [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/frequency.v:4]
-INFO: [Synth 8-638] synthesizing module 'cpuclk' [D:/VivadoProCS202/CPU/CPU.runs/synth_1/.Xil/Vivado-30568-LAPTOP-8IF7AABH/realtime/cpuclk_stub.v:5]
-INFO: [Synth 8-256] done synthesizing module 'cpuclk' (6#1) [D:/VivadoProCS202/CPU/CPU.runs/synth_1/.Xil/Vivado-30568-LAPTOP-8IF7AABH/realtime/cpuclk_stub.v:5]
+INFO: [Synth 8-256] done synthesizing module 'ioRead' (6#1) [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/ioRead.v:3]
 INFO: [Synth 8-638] synthesizing module 'stage_control' [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/stage_control.v:3]
 INFO: [Synth 8-256] done synthesizing module 'stage_control' (7#1) [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/stage_control.v:3]
-INFO: [Synth 8-638] synthesizing module 'uart' [D:/VivadoProCS202/CPU/CPU.runs/synth_1/.Xil/Vivado-30568-LAPTOP-8IF7AABH/realtime/uart_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'uart' (8#1) [D:/VivadoProCS202/CPU/CPU.runs/synth_1/.Xil/Vivado-30568-LAPTOP-8IF7AABH/realtime/uart_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'uart' [D:/VivadoProCS202/CPU/CPU.runs/synth_1/.Xil/Vivado-29948-LAPTOP-8IF7AABH/realtime/uart_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'uart' (8#1) [D:/VivadoProCS202/CPU/CPU.runs/synth_1/.Xil/Vivado-29948-LAPTOP-8IF7AABH/realtime/uart_stub.v:6]
 INFO: [Synth 8-638] synthesizing module 'Ifetc32' [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/Ifetc32.v:3]
-INFO: [Synth 8-638] synthesizing module 'prgrom' [D:/VivadoProCS202/CPU/CPU.runs/synth_1/.Xil/Vivado-30568-LAPTOP-8IF7AABH/realtime/prgrom_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'prgrom' (9#1) [D:/VivadoProCS202/CPU/CPU.runs/synth_1/.Xil/Vivado-30568-LAPTOP-8IF7AABH/realtime/prgrom_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'prgrom' [D:/VivadoProCS202/CPU/CPU.runs/synth_1/.Xil/Vivado-29948-LAPTOP-8IF7AABH/realtime/prgrom_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'prgrom' (9#1) [D:/VivadoProCS202/CPU/CPU.runs/synth_1/.Xil/Vivado-29948-LAPTOP-8IF7AABH/realtime/prgrom_stub.v:6]
 INFO: [Synth 8-256] done synthesizing module 'Ifetc32' (10#1) [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/Ifetc32.v:3]
 INFO: [Synth 8-638] synthesizing module 'dmemory32' [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/dmemory32.v:3]
-INFO: [Synth 8-638] synthesizing module 'RAM' [D:/VivadoProCS202/CPU/CPU.runs/synth_1/.Xil/Vivado-30568-LAPTOP-8IF7AABH/realtime/RAM_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'RAM' (11#1) [D:/VivadoProCS202/CPU/CPU.runs/synth_1/.Xil/Vivado-30568-LAPTOP-8IF7AABH/realtime/RAM_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'RAM' [D:/VivadoProCS202/CPU/CPU.runs/synth_1/.Xil/Vivado-29948-LAPTOP-8IF7AABH/realtime/RAM_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'RAM' (11#1) [D:/VivadoProCS202/CPU/CPU.runs/synth_1/.Xil/Vivado-29948-LAPTOP-8IF7AABH/realtime/RAM_stub.v:6]
 INFO: [Synth 8-256] done synthesizing module 'dmemory32' (12#1) [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/dmemory32.v:3]
 INFO: [Synth 8-638] synthesizing module 'control32' [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/control32.v:3]
 INFO: [Synth 8-256] done synthesizing module 'control32' (13#1) [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/control32.v:3]
@@ -86,7 +85,7 @@ INFO: [Synth 8-638] synthesizing module 'MemOrIO' [D:/VivadoProCS202/CPU/CPU.src
 INFO: [Synth 8-256] done synthesizing module 'MemOrIO' (16#1) [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/MemOrIO.v:3]
 INFO: [Synth 8-638] synthesizing module 'ioWrite32' [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/ioWrite32.v:3]
 INFO: [Synth 8-256] done synthesizing module 'ioWrite32' (17#1) [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/ioWrite32.v:3]
-WARNING: [Synth 8-3848] Net Read_data_1 in module/entity cputop does not have driver. [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:59]
+WARNING: [Synth 8-3848] Net Read_data_1 in module/entity cputop does not have driver. [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:29]
 INFO: [Synth 8-256] done synthesizing module 'cputop' (18#1) [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:1]
 WARNING: [Synth 8-3331] design MemOrIO has unconnected port mRead
 WARNING: [Synth 8-3331] design MemOrIO has unconnected port addr_in[31]
@@ -145,7 +144,7 @@ WARNING: [Synth 8-3331] design ioRead has unconnected port sw[18]
 WARNING: [Synth 8-3331] design ioRead has unconnected port sw[17]
 WARNING: [Synth 8-3331] design ioRead has unconnected port sw[16]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 419.148 ; gain = 177.418
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 418.855 ; gain = 177.938
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -154,54 +153,54 @@ Report Check Netlist:
 +------+------------------+-------+---------+-------+------------------+
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
-WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[31] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:164]
-WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[30] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:164]
-WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[29] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:164]
-WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[28] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:164]
-WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[27] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:164]
-WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[26] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:164]
-WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[25] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:164]
-WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[24] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:164]
-WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[23] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:164]
-WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[22] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:164]
-WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[21] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:164]
-WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[20] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:164]
-WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[19] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:164]
-WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[18] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:164]
-WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[17] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:164]
-WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[16] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:164]
-WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[15] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:164]
-WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[14] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:164]
-WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[13] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:164]
-WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[12] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:164]
-WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[11] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:164]
-WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[10] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:164]
-WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[9] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:164]
-WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[8] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:164]
-WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[7] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:164]
-WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[6] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:164]
-WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[5] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:164]
-WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[4] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:164]
-WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[3] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:164]
-WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[2] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:164]
-WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[1] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:164]
-WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[0] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:164]
+WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[31] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:146]
+WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[30] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:146]
+WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[29] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:146]
+WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[28] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:146]
+WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[27] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:146]
+WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[26] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:146]
+WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[25] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:146]
+WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[24] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:146]
+WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[23] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:146]
+WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[22] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:146]
+WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[21] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:146]
+WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[20] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:146]
+WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[19] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:146]
+WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[18] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:146]
+WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[17] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:146]
+WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[16] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:146]
+WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[15] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:146]
+WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[14] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:146]
+WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[13] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:146]
+WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[12] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:146]
+WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[11] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:146]
+WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[10] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:146]
+WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[9] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:146]
+WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[8] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:146]
+WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[7] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:146]
+WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[6] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:146]
+WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[5] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:146]
+WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[4] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:146]
+WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[3] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:146]
+WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[2] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:146]
+WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[1] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:146]
+WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[0] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:146]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 419.148 ; gain = 177.418
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 418.855 ; gain = 177.938
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a100tfgg484-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [D:/VivadoProCS202/CPU/CPU.runs/synth_1/.Xil/Vivado-30568-LAPTOP-8IF7AABH/dcp4/RAM_in_context.xdc] for cell 'dmemory/ram'
-Finished Parsing XDC File [D:/VivadoProCS202/CPU/CPU.runs/synth_1/.Xil/Vivado-30568-LAPTOP-8IF7AABH/dcp4/RAM_in_context.xdc] for cell 'dmemory/ram'
-Parsing XDC File [D:/VivadoProCS202/CPU/CPU.runs/synth_1/.Xil/Vivado-30568-LAPTOP-8IF7AABH/dcp5/prgrom_in_context.xdc] for cell 'ifetch/instmem'
-Finished Parsing XDC File [D:/VivadoProCS202/CPU/CPU.runs/synth_1/.Xil/Vivado-30568-LAPTOP-8IF7AABH/dcp5/prgrom_in_context.xdc] for cell 'ifetch/instmem'
-Parsing XDC File [D:/VivadoProCS202/CPU/CPU.runs/synth_1/.Xil/Vivado-30568-LAPTOP-8IF7AABH/dcp6/uart_in_context.xdc] for cell 'uart'
-Finished Parsing XDC File [D:/VivadoProCS202/CPU/CPU.runs/synth_1/.Xil/Vivado-30568-LAPTOP-8IF7AABH/dcp6/uart_in_context.xdc] for cell 'uart'
-Parsing XDC File [D:/VivadoProCS202/CPU/CPU.runs/synth_1/.Xil/Vivado-30568-LAPTOP-8IF7AABH/dcp7/cpuclk_in_context.xdc] for cell 'cpu_clock'
-Finished Parsing XDC File [D:/VivadoProCS202/CPU/CPU.runs/synth_1/.Xil/Vivado-30568-LAPTOP-8IF7AABH/dcp7/cpuclk_in_context.xdc] for cell 'cpu_clock'
+Parsing XDC File [D:/VivadoProCS202/CPU/CPU.runs/synth_1/.Xil/Vivado-29948-LAPTOP-8IF7AABH/dcp4/RAM_in_context.xdc] for cell 'dmemory/ram'
+Finished Parsing XDC File [D:/VivadoProCS202/CPU/CPU.runs/synth_1/.Xil/Vivado-29948-LAPTOP-8IF7AABH/dcp4/RAM_in_context.xdc] for cell 'dmemory/ram'
+Parsing XDC File [D:/VivadoProCS202/CPU/CPU.runs/synth_1/.Xil/Vivado-29948-LAPTOP-8IF7AABH/dcp5/prgrom_in_context.xdc] for cell 'ifetch/instmem'
+Finished Parsing XDC File [D:/VivadoProCS202/CPU/CPU.runs/synth_1/.Xil/Vivado-29948-LAPTOP-8IF7AABH/dcp5/prgrom_in_context.xdc] for cell 'ifetch/instmem'
+Parsing XDC File [D:/VivadoProCS202/CPU/CPU.runs/synth_1/.Xil/Vivado-29948-LAPTOP-8IF7AABH/dcp6/uart_in_context.xdc] for cell 'uart'
+Finished Parsing XDC File [D:/VivadoProCS202/CPU/CPU.runs/synth_1/.Xil/Vivado-29948-LAPTOP-8IF7AABH/dcp6/uart_in_context.xdc] for cell 'uart'
+Parsing XDC File [D:/VivadoProCS202/CPU/CPU.runs/synth_1/.Xil/Vivado-29948-LAPTOP-8IF7AABH/dcp7/cpuclk_in_context.xdc] for cell 'cpu_clock'
+Finished Parsing XDC File [D:/VivadoProCS202/CPU/CPU.runs/synth_1/.Xil/Vivado-29948-LAPTOP-8IF7AABH/dcp7/cpuclk_in_context.xdc] for cell 'cpu_clock'
 Parsing XDC File [D:/VivadoProCS202/CPU/CPU.srcs/constrs_1/new/cputop.xdc]
 Finished Parsing XDC File [D:/VivadoProCS202/CPU/CPU.srcs/constrs_1/new/cputop.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/VivadoProCS202/CPU/CPU.srcs/constrs_1/new/cputop.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/cputop_propImpl.xdc].
@@ -211,16 +210,16 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 785.949 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 786.305 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 785.949 ; gain = 544.219
+Finished Constraint Validation : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 786.305 ; gain = 545.387
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tfgg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 785.949 ; gain = 544.219
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 786.305 ; gain = 545.387
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -230,8 +229,10 @@ Applied set_property DONT_TOUCH = true for dmemory/ram. (constraint file  auto g
 Applied set_property DONT_TOUCH = true for ifetch/instmem. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for uart. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 785.949 ; gain = 544.219
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 786.305 ; gain = 545.387
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-5545] ROM "cnt" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "clk_out" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5546] ROM "key_value" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5545] ROM "cnt" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "clk_out" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
@@ -243,8 +244,6 @@ INFO: [Synth 8-5546] ROM "col_val" won't be mapped to RAM because it is too spar
 INFO: [Synth 8-5546] ROM "keyboard_val" won't be mapped to RAM because it is too sparse
 WARNING: [Synth 8-6014] Unused sequential element cnt_reg was removed.  [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/keyboard.v:18]
 INFO: [Synth 8-5546] ROM "value_decoder" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5545] ROM "cnt" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "clk_out" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5546] ROM "R_format" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "MemorIOtoReg" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5544] ROM "I_format" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
@@ -260,7 +259,7 @@ WARNING: [Synth 8-327] inferring latch for variable 'hi_reg' [D:/VivadoProCS202/
 WARNING: [Synth 8-327] inferring latch for variable 'lo_reg' [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/executs32.v:47]
 WARNING: [Synth 8-327] inferring latch for variable 'write_data_reg' [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/MemOrIO.v:34]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 785.949 ; gain = 544.219
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 786.305 ; gain = 545.387
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -300,15 +299,15 @@ Detailed RTL Component Info :
 	   8 Input      8 Bit        Muxes := 1     
 	   2 Input      8 Bit        Muxes := 8     
 	   2 Input      6 Bit        Muxes := 5     
-	   2 Input      4 Bit        Muxes := 1     
 	   7 Input      4 Bit        Muxes := 1     
 	  17 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 2     
 	   2 Input      2 Bit        Muxes := 2     
 	   2 Input      1 Bit        Muxes := 412   
-	   3 Input      1 Bit        Muxes := 1     
 	   7 Input      1 Bit        Muxes := 4     
 	  17 Input      1 Bit        Muxes := 2     
+	   3 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -323,16 +322,6 @@ Detailed RTL Component Info :
 +---Muxes : 
 	   2 Input     32 Bit        Muxes := 433   
 	   2 Input      1 Bit        Muxes := 386   
-Module frequency__parameterized0 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     32 Bit       Adders := 1     
-+---Registers : 
-	               32 Bit    Registers := 1     
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input     32 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 1     
 Module key_debounce__4 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -366,7 +355,7 @@ Detailed RTL Component Info :
 	   2 Input     20 Bit        Muxes := 2     
 	   2 Input     16 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 1     
-Module key_debounce__2 
+Module key_debounce__3 
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input     20 Bit       Adders := 1     
@@ -377,7 +366,65 @@ Detailed RTL Component Info :
 	   2 Input     20 Bit        Muxes := 2     
 	   2 Input     16 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 1     
-Module key_debounce__3 
+Module frequency__parameterized0 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module tubeDriver 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   8 Input      8 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 8     
+	   2 Input      3 Bit        Muxes := 1     
+Module keyboard 
+Detailed RTL Component Info : 
++---Registers : 
+	                6 Bit    Registers := 1     
+	                4 Bit    Registers := 4     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      6 Bit        Muxes := 5     
+	   7 Input      4 Bit        Muxes := 1     
+	  17 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   7 Input      1 Bit        Muxes := 4     
+	  17 Input      1 Bit        Muxes := 1     
+Module ioRead 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 2     
+	               16 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   3 Input     32 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 2     
+	  17 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+	  17 Input      1 Bit        Muxes := 1     
+Module key_debounce__1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     20 Bit       Adders := 1     
++---Registers : 
+	               20 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     20 Bit        Muxes := 2     
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module key_debounce__2 
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input     20 Bit       Adders := 1     
@@ -426,17 +473,6 @@ Detailed RTL Component Info :
 	   2 Input      4 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 4     
 	   3 Input      1 Bit        Muxes := 1     
-Module key_debounce__1 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     20 Bit       Adders := 1     
-+---Registers : 
-	               20 Bit    Registers := 1     
-	                1 Bit    Registers := 2     
-+---Muxes : 
-	   2 Input     20 Bit        Muxes := 2     
-	   2 Input     16 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 1     
 Module frequency 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -447,43 +483,6 @@ Detailed RTL Component Info :
 +---Muxes : 
 	   2 Input     32 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 1     
-Module tubeDriver 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input      3 Bit       Adders := 1     
-+---Registers : 
-	                3 Bit    Registers := 1     
-+---Muxes : 
-	   8 Input      8 Bit        Muxes := 1     
-	   2 Input      8 Bit        Muxes := 8     
-	   2 Input      3 Bit        Muxes := 1     
-Module keyboard 
-Detailed RTL Component Info : 
-+---Registers : 
-	                6 Bit    Registers := 1     
-	                4 Bit    Registers := 4     
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      6 Bit        Muxes := 5     
-	   7 Input      4 Bit        Muxes := 1     
-	  17 Input      4 Bit        Muxes := 1     
-	   2 Input      2 Bit        Muxes := 1     
-	   7 Input      1 Bit        Muxes := 4     
-	  17 Input      1 Bit        Muxes := 1     
-Module ioRead 
-Detailed RTL Component Info : 
-+---Registers : 
-	               32 Bit    Registers := 2     
-	               16 Bit    Registers := 2     
-	                4 Bit    Registers := 1     
-+---Muxes : 
-	   3 Input     32 Bit        Muxes := 1     
-	   2 Input     32 Bit        Muxes := 1     
-	   2 Input     16 Bit        Muxes := 2     
-	  17 Input      4 Bit        Muxes := 1     
-	   2 Input      3 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 2     
-	  17 Input      1 Bit        Muxes := 1     
 Module MemOrIO 
 Detailed RTL Component Info : 
 +---Muxes : 
@@ -520,21 +519,21 @@ DSP Report: operator hi0 is absorbed into DSP hi0.
 DSP Report: Generating DSP hi0, operation Mode is: (PCIN>>17)+A*B.
 DSP Report: operator hi0 is absorbed into DSP hi0.
 DSP Report: operator hi0 is absorbed into DSP hi0.
-INFO: [Synth 8-5545] ROM "uart_clock/cnt" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "uart_clock/clk_out" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5546] ROM "key_confirm/key_value" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "key_confirm_a/key_value" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "key_confirm_b/key_value" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "nolabel_line115/key1/key_value" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "nolabel_line115/tube/clock_f1/cnt" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "nolabel_line115/tube/clock_f1/clk_out" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "nolabel_line115/key/keyboard_val" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "nolabel_line115/value_decoder" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "stage_controll/rst_key/key_value" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "stage_controll/uart_key/key_value" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "nolabel_line22/key1/key_value" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5545] ROM "nolabel_line22/tube/clock_f1/cnt" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "nolabel_line22/tube/clock_f1/clk_out" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5546] ROM "nolabel_line22/key/keyboard_val" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "nolabel_line22/value_decoder" won't be mapped to RAM because it is too sparse
-WARNING: [Synth 8-6014] Unused sequential element nolabel_line22/key/cnt_reg was removed.  [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/keyboard.v:18]
+INFO: [Synth 8-5545] ROM "uart_clock/cnt" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "uart_clock/clk_out" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+WARNING: [Synth 8-6014] Unused sequential element nolabel_line115/key/cnt_reg was removed.  [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/keyboard.v:18]
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:00 ; elapsed = 00:01:02 . Memory (MB): peak = 897.676 ; gain = 655.945
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:00 ; elapsed = 00:01:02 . Memory (MB): peak = 901.531 ; gain = 660.613
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -568,13 +567,13 @@ Start Applying XDC Timing Constraints
 INFO: [Synth 8-5578] Moved timing constraint from pin 'cpu_clock/clk_out1' to pin 'cpu_clock/bbstub_clk_out1/O'
 INFO: [Synth 8-5819] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:14 ; elapsed = 00:01:15 . Memory (MB): peak = 898.777 ; gain = 657.047
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:14 ; elapsed = 00:01:16 . Memory (MB): peak = 902.430 ; gain = 661.512
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:16 ; elapsed = 00:01:18 . Memory (MB): peak = 941.375 ; gain = 699.645
+Finished Timing Optimization : Time (s): cpu = 00:01:17 ; elapsed = 00:01:19 . Memory (MB): peak = 951.250 ; gain = 710.332
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -590,7 +589,7 @@ Start Technology Mapping
 WARNING: [Synth 8-3332] Sequential element (ifetch/PC_reg[0]) is unused and will be removed from module cputop.
 WARNING: [Synth 8-3332] Sequential element (ifetch/link_addr_reg[0]) is unused and will be removed from module cputop.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:30 ; elapsed = 00:01:32 . Memory (MB): peak = 1120.465 ; gain = 878.734
+Finished Technology Mapping : Time (s): cpu = 00:01:46 ; elapsed = 00:01:52 . Memory (MB): peak = 1124.262 ; gain = 883.344
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -614,7 +613,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:32 ; elapsed = 00:01:34 . Memory (MB): peak = 1120.465 ; gain = 878.734
+Finished IO Insertion : Time (s): cpu = 00:01:56 ; elapsed = 00:02:05 . Memory (MB): peak = 1124.262 ; gain = 883.344
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -627,7 +626,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:32 ; elapsed = 00:01:34 . Memory (MB): peak = 1120.465 ; gain = 878.734
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:56 ; elapsed = 00:02:06 . Memory (MB): peak = 1124.262 ; gain = 883.344
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -639,25 +638,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:33 ; elapsed = 00:01:35 . Memory (MB): peak = 1120.465 ; gain = 878.734
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:58 ; elapsed = 00:02:07 . Memory (MB): peak = 1124.262 ; gain = 883.344
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:33 ; elapsed = 00:01:35 . Memory (MB): peak = 1120.465 ; gain = 878.734
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:59 ; elapsed = 00:02:08 . Memory (MB): peak = 1124.262 ; gain = 883.344
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:34 ; elapsed = 00:01:36 . Memory (MB): peak = 1120.465 ; gain = 878.734
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:00 ; elapsed = 00:02:09 . Memory (MB): peak = 1124.262 ; gain = 883.344
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:34 ; elapsed = 00:01:36 . Memory (MB): peak = 1120.465 ; gain = 878.734
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:00 ; elapsed = 00:02:09 . Memory (MB): peak = 1124.262 ; gain = 883.344
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -702,35 +701,35 @@ Report Cell Usage:
 +------+--------+------+
 
 Report Instance Areas: 
-+------+-----------------+--------------------------+------+
-|      |Instance         |Module                    |Cells |
-+------+-----------------+--------------------------+------+
-|1     |top              |                          | 11041|
-|2     |  alu            |executs32                 |  2853|
-|3     |  decoder        |decode32                  |  2289|
-|4     |  dmemory        |dmemory32                 |    32|
-|5     |  ifetch         |Ifetc32                   |  4807|
-|6     |  ioWrite        |ioWrite32                 |    20|
-|7     |  key_confirm    |key_debounce              |    61|
-|8     |  key_confirm_a  |key_debounce_0            |    62|
-|9     |  key_confirm_b  |key_debounce_1            |    61|
-|10    |  memOrio        |MemOrIO                   |    20|
-|11    |  nolabel_line22 |ioRead                    |   416|
-|12    |    key          |keyboard                  |    89|
-|13    |    key1         |key_debounce_4            |    96|
-|14    |    tube         |tubeDriver                |   112|
-|15    |      clock_f1   |frequency                 |    82|
-|16    |  stage_controll |stage_control             |   235|
-|17    |    rst_key      |key_debounce_2            |    62|
-|18    |    uart_key     |key_debounce_3            |    63|
-|19    |  uart_clock     |frequency__parameterized0 |    52|
-+------+-----------------+--------------------------+------+
++------+------------------+--------------------------+------+
+|      |Instance          |Module                    |Cells |
++------+------------------+--------------------------+------+
+|1     |top               |                          | 11041|
+|2     |  alu             |executs32                 |  2853|
+|3     |  decoder         |decode32                  |  2289|
+|4     |  dmemory         |dmemory32                 |    32|
+|5     |  ifetch          |Ifetc32                   |  4807|
+|6     |  ioWrite         |ioWrite32                 |    20|
+|7     |  key_confirm     |key_debounce              |    61|
+|8     |  key_confirm_a   |key_debounce_0            |    62|
+|9     |  key_confirm_b   |key_debounce_1            |    61|
+|10    |  memOrio         |MemOrIO                   |    20|
+|11    |  nolabel_line115 |ioRead                    |   416|
+|12    |    key           |keyboard                  |    89|
+|13    |    key1          |key_debounce_4            |    96|
+|14    |    tube          |tubeDriver                |   112|
+|15    |      clock_f1    |frequency__parameterized0 |    82|
+|16    |  stage_controll  |stage_control             |   235|
+|17    |    rst_key       |key_debounce_2            |    62|
+|18    |    uart_key      |key_debounce_3            |    63|
+|19    |  uart_clock      |frequency                 |    52|
++------+------------------+--------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:34 ; elapsed = 00:01:36 . Memory (MB): peak = 1120.465 ; gain = 878.734
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:00 ; elapsed = 00:02:09 . Memory (MB): peak = 1124.262 ; gain = 883.344
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 8 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:20 ; elapsed = 00:01:28 . Memory (MB): peak = 1120.465 ; gain = 511.934
-Synthesis Optimization Complete : Time (s): cpu = 00:01:35 ; elapsed = 00:01:36 . Memory (MB): peak = 1120.465 ; gain = 878.734
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:44 ; elapsed = 00:02:01 . Memory (MB): peak = 1124.262 ; gain = 515.895
+Synthesis Optimization Complete : Time (s): cpu = 00:02:00 ; elapsed = 00:02:09 . Memory (MB): peak = 1124.262 ; gain = 883.344
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 1135 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -741,12 +740,10 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   LD => LDCE: 90 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-94 Infos, 112 Warnings, 0 Critical Warnings and 0 Errors encountered.
+94 Infos, 111 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:39 ; elapsed = 00:01:42 . Memory (MB): peak = 1120.465 ; gain = 889.098
-INFO: [Common 17-600] The following parameters have non-default value.
-general.maxThreads
+synth_design: Time (s): cpu = 00:02:04 ; elapsed = 00:02:15 . Memory (MB): peak = 1124.262 ; gain = 893.672
 INFO: [Common 17-1381] The checkpoint 'D:/VivadoProCS202/CPU/CPU.runs/synth_1/cputop.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file cputop_utilization_synth.rpt -pb cputop_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.090 . Memory (MB): peak = 1120.465 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Mon May 23 01:29:52 2022...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.097 . Memory (MB): peak = 1124.262 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Mon May 23 05:05:07 2022...

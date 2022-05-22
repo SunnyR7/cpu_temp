@@ -17,8 +17,8 @@ module executs32(Read_data_1,Read_data_2,Sign_extend,Function_opcode,Exe_opcode,
     output     Zero;              // 为1表明计算值为0  branch
     output reg [31:0] ALU_Result;        // 计算的数据结果    
     output [31:0] Addr_Result;		// 计算的地址结果     
-    output reg [31:0] hi;
-    output reg [31:0] lo;   
+    output reg [31:0] hi;           //指令拓展mul/div用到的要写入hi寄存器的值 
+    output reg [31:0] lo;           //指令拓展mul/div用到的要写入lo寄存器的值
     input[31:0]  PC_plus_4;         // 来自取指单元的PC+4
 
     wire[31:0] Ainput,Binput;

@@ -1,13 +1,13 @@
 module tubeDriver ( 
     input clk, reset,
-    input[7:0] text7,
-    input[7:0] text6,
-    input[7:0] text5,
-    input[7:0] text4,
-    input[7:0] text3,
-    input[7:0] text2,
-    input[7:0] text1,
-    input[7:0] text0,
+    input[7:0] text7,//第7个七段数码管的值
+    input[7:0] text6,//第6个七段数码管的值
+    input[7:0] text5,//第5个七段数码管的值
+    input[7:0] text4,//第4个七段数码管的值
+    input[7:0] text3,//第3个七段数码管的值
+    input[7:0] text2,//第2个七段数码管的值
+    input[7:0] text1,//第1个七段数码管的值
+    input[7:0] text0,//第0个七段数码管的值
     output[7:0] seg_en,
     output[7:0] seg_out
 );

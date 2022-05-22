@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-| Date         : Mon May 23 01:32:59 2022
+| Date         : Mon May 23 05:08:09 2022
 | Host         : LAPTOP-8IF7AABH running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -max_paths 10 -file cputop_timing_summary_routed.rpt -rpx cputop_timing_summary_routed.rpx -warn_on_violation
 | Design       : cputop
@@ -122,21 +122,21 @@ Table of Contents
 
  There are 64 register/latch pins with no clock driven by root clock pin: ifetch/instmem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[6].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/DOADO[0] (HIGH)
 
- There are 27 register/latch pins with no clock driven by root clock pin: nolabel_line22/key/cnt_reg[19]/Q (HIGH)
+ There are 27 register/latch pins with no clock driven by root clock pin: nolabel_line115/key/cnt_reg[19]/Q (HIGH)
 
- There are 6 register/latch pins with no clock driven by root clock pin: nolabel_line22/key/current_state_reg[0]/Q (HIGH)
+ There are 6 register/latch pins with no clock driven by root clock pin: nolabel_line115/key/current_state_reg[0]/Q (HIGH)
 
- There are 6 register/latch pins with no clock driven by root clock pin: nolabel_line22/key/current_state_reg[1]/Q (HIGH)
+ There are 6 register/latch pins with no clock driven by root clock pin: nolabel_line115/key/current_state_reg[1]/Q (HIGH)
 
- There are 6 register/latch pins with no clock driven by root clock pin: nolabel_line22/key/current_state_reg[2]/Q (HIGH)
+ There are 6 register/latch pins with no clock driven by root clock pin: nolabel_line115/key/current_state_reg[2]/Q (HIGH)
 
- There are 6 register/latch pins with no clock driven by root clock pin: nolabel_line22/key/current_state_reg[3]/Q (HIGH)
+ There are 6 register/latch pins with no clock driven by root clock pin: nolabel_line115/key/current_state_reg[3]/Q (HIGH)
 
- There are 6 register/latch pins with no clock driven by root clock pin: nolabel_line22/key/current_state_reg[4]/Q (HIGH)
+ There are 6 register/latch pins with no clock driven by root clock pin: nolabel_line115/key/current_state_reg[4]/Q (HIGH)
 
- There are 6 register/latch pins with no clock driven by root clock pin: nolabel_line22/key/current_state_reg[5]/Q (HIGH)
+ There are 6 register/latch pins with no clock driven by root clock pin: nolabel_line115/key/current_state_reg[5]/Q (HIGH)
 
- There are 3 register/latch pins with no clock driven by root clock pin: nolabel_line22/tube/clock_f1/clk_out_reg/Q (HIGH)
+ There are 3 register/latch pins with no clock driven by root clock pin: nolabel_line115/tube/clock_f1/clk_out_reg/Q (HIGH)
 
  There are 34 register/latch pins with no clock driven by root clock pin: stage_controll/start_pg_reg/Q (HIGH)
 

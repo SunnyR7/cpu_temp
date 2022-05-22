@@ -1,56 +1,26 @@
 module cputop (clk,switch,reset,uart_stage,led,confirm,confirm_a,confirm_b,rx,tx,key_backspace,row,col_n,tube_char,tube_switch);
-    input clk;
+    input clk; //时钟信号
     // input confirm;
-    input[23:0] switch;
-    input reset;
-    input uart_stage;
-    output[23:0] led;
-    input confirm;
-    input confirm_a;
-    input confirm_b;
-    input rx;
-    output tx;
-    input key_backspace;
-    input[3:0] row;
-    output  [3:0] col_n;
-    output [7:0] tube_char;
-    output [7:0] tube_switch;
+    input[23:0] switch; //24个拨码开关
+    input reset; //重置按键
+    input uart_stage; //uart状态按键
+    output[23:0] led; //led灯
+    input confirm; //确认按键1
+    input confirm_a; //确认按键2
+    input confirm_b; //确认按键3
+    input rx; //uart的输入
+    output tx; //uart的输出
+    input key_backspace; //退格键按键
+    input[3:0] row; //矩阵键盘
+    output  [3:0] col_n; //矩阵键盘
+    output [7:0] tube_char; //七段数码管
+    output [7:0] tube_switch; //七段数码管
 
-    wire [15:0] out_value_right;
-    wire [2:0] out_value_left;
+    wire [15:0] out_value_right;//io选择后的信号
+    wire [2:0] out_value_left;//io选择后的按键
 
-    ioRead(
-        .clk(clk),
-        .out_value_right(out_value_right),
-        .out_value_left(out_value_left),
-        .sw({switch[23:21],rst|~switch[20],switch[19:0]}),
-        .key_backspace(key_backspace),
-        .row(row),
-        .col_n(col_n),
-        .tube_char(tube_char),
-        .tube_switch(tube_switch)
-    );
-
-
-    //input是uart接口传入，这个每次传1bit
-    //output是cpu告诉另一边接收结束了
-
-    //reset信号是拨码开关从左往右数第7个
-    //开始uart通信时拨码开关从左往右数第8个
-    //上面这两个表示状态的信号可以变成按键，暂时是弄的拨码开关
-    //就可以弄成按一下是reset，再按一下是正常状态，可以是reset不变，外面弄一个按一下reset取反一次的
-
-    //使用了两个拨码开关表示状态
-    //从左往右数第7个 和 从左往右数第8个
-    //从左往右数第8个拨上去的时候 是uart通信模式，同时进行rst
-    //当从两个开关任意一个拨上去的都是rst状态
-    //只有当两个开关都拨下来才是正常工作状态
-    wire rst;
-    wire start_pg;
-    // assign start_pg=switch[16];
-    // assign rst=switch[17]|switch[16];
-    //更新：用两个按键调整状态，删去原来用拨码开关调整状态的方式
-    //同时加入最左边的两个led灯表示状态
+    wire rst;//为1则进入reset状态，uart状态下同时reset active high
+    wire start_pg;//为1则进入uart状态 active high
     
     //Ifetch
     wire[31:0] Instruction;
@@ -100,16 +70,16 @@ module cputop (clk,switch,reset,uart_stage,led,confirm,confirm_a,confirm_b,rx,tx
     wire clock;
     wire clock_uart;
     frequency #(10) uart_clock(clk, 1'b1,clock_uart);
-    cpuclk cpu_clock(
+    cpuclk cpu_clock( //生成cpu用的时钟信号的ip核模块
         .clk_in1(clk), 
         .clk_out1(clock)
     );
 
     //MemOrIO
-    wire LEDCtrl;
-    wire SwitchCtrl;
-    wire [31:0] read_dataFromMemoryOrIo;
-    wire [31:0] write_dataToMemoryOrIo;
+    wire LEDCtrl;//led片选信号
+    wire SwitchCtrl;//Switch片选信号
+    wire [31:0] read_dataFromMemoryOrIo; //要写入decoder的值
+    wire [31:0] write_dataToMemoryOrIo;  //写给要写入decoder的值的值
 
 
     //uart
@@ -122,9 +92,9 @@ module cputop (clk,switch,reset,uart_stage,led,confirm,confirm_a,confirm_b,rx,tx
     //data to program_rom or dmemory32
     wire [31:0] upg_dat_o;
 
-    wire confirm_key_value;
-    wire confirm_a_key_value;
-    wire confirm_b_key_value;
+    wire confirm_key_value;//确认用例编号键
+    wire confirm_a_key_value;//确认a值键
+    wire confirm_b_key_value;//确认b值键
 
     key_debounce key_confirm(
     .sys_clk(clk),
@@ -140,6 +110,18 @@ module cputop (clk,switch,reset,uart_stage,led,confirm,confirm_a,confirm_b,rx,tx
     .sys_clk(clk),
     .key(confirm_b), 
     .key_value(confirm_b_key_value) 
+    );
+
+    ioRead(
+        .clk(clk),
+        .out_value_right(out_value_right),
+        .out_value_left(out_value_left),
+        .sw({switch[23:21],rst|~switch[20],switch[19:0]}),
+        .key_backspace(key_backspace),
+        .row(row),
+        .col_n(col_n),
+        .tube_char(tube_char),
+        .tube_switch(tube_switch)
     );
 
     stage_control stage_controll(
@@ -275,7 +257,7 @@ module cputop (clk,switch,reset,uart_stage,led,confirm,confirm_a,confirm_b,rx,tx
 
     //第18个是回文亮灯
     ioWrite32 ioWrite(
-        .writeData({rst,start_pg,(confirm_key_value|confirm_a_key_value|confirm_b_key_value)&~rst,switch[20]&~rst,write_dataToMemoryOrIo[19:0]}),
+        .writeData({rst,start_pg,(confirm_key_value|confirm_a_key_value|confirm_b_key_value)&~rst,switch[20]&~rst,write_dataToMemoryOrIo[19:0]}),//写给io的值
         .clock(clock),
         .reset(rst),
         .ioWrite(IOWrite),
