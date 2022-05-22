@@ -16,7 +16,8 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param general.maxThreads 5
+set_param general.maxThreads 6
+set_param xicom.use_bs_reader 1
 create_project -in_memory -part xc7a100tfgg484-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -25,7 +26,7 @@ set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
 set_property webtalk.parent_dir D:/VivadoProCS202/CPU/CPU.cache/wt [current_project]
 set_property parent.project_path D:/VivadoProCS202/CPU/CPU.xpr [current_project]
-set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
+set_property XPM_LIBRARIES XPM_MEMORY [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property ip_repo_paths d:/VivadoProCS202/CPU/SEU_CSE_507_user_uart_bmpg_1.3 [current_project]
@@ -40,9 +41,13 @@ read_verilog -library xil_defaultlib {
   D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/decode32.v
   D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/dmemory32.v
   D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/executs32.v
+  D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/frequency.v
+  D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/ioRead.v
   D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/ioWrite32.v
   D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/key_debounce.v
+  D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/keyboard.v
   D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/stage_control.v
+  D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/tubeDriver.v
   D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v
 }
 read_ip -quiet D:/VivadoProCS202/CPU/CPU.srcs/sources_1/ip/RAM/RAM.xci
@@ -50,11 +55,6 @@ set_property used_in_implementation false [get_files -all d:/VivadoProCS202/CPU/
 
 read_ip -quiet D:/VivadoProCS202/CPU/CPU.srcs/sources_1/ip/prgrom/prgrom.xci
 set_property used_in_implementation false [get_files -all d:/VivadoProCS202/CPU/CPU.srcs/sources_1/ip/prgrom/prgrom_ooc.xdc]
-
-read_ip -quiet D:/VivadoProCS202/CPU/CPU.srcs/sources_1/ip/cpuclk/cpuclk.xci
-set_property used_in_implementation false [get_files -all d:/VivadoProCS202/CPU/CPU.srcs/sources_1/ip/cpuclk/cpuclk_board.xdc]
-set_property used_in_implementation false [get_files -all d:/VivadoProCS202/CPU/CPU.srcs/sources_1/ip/cpuclk/cpuclk.xdc]
-set_property used_in_implementation false [get_files -all d:/VivadoProCS202/CPU/CPU.srcs/sources_1/ip/cpuclk/cpuclk_ooc.xdc]
 
 read_ip -quiet D:/VivadoProCS202/CPU/CPU.srcs/sources_1/ip/uart/uart.xci
 

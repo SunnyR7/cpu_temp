@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 
 
-module cputop (clk,switch,reset,uart_stage,led,confirm,confirm_a,confirm_b,rx,tx);
+module cputop (clk,switch,reset,uart_stage,led,confirm,confirm_a,confirm_b,rx,tx,key_backspace,row,col_n,tube_char,tube_switch);
     input clk;
     // input confirm;
     input[23:0] switch;
@@ -13,6 +13,28 @@ module cputop (clk,switch,reset,uart_stage,led,confirm,confirm_a,confirm_b,rx,tx
     input confirm_b;
     input rx;
     output tx;
+    input key_backspace;
+    input[3:0] row;
+    output  [3:0] col_n;
+    output [7:0] tube_char;
+    output [7:0] tube_switch;
+
+    wire [15:0] out_value_right;
+    wire [2:0] out_value_left;
+
+    ioRead(
+        .clk(clk),
+        .out_value_right(out_value_right),
+        .out_value_left(out_value_left),
+        .sw({switch[23:21],rst|~switch[20],switch[19:0]}),
+        .key_backspace(key_backspace),
+        .row(row),
+        .col_n(col_n),
+        .tube_char(tube_char),
+        .tube_switch(tube_switch)
+    );
+
+
     //input是uart接口传入，这个每次传1bit
     //output是cpu告诉另一边接收结束了
 
@@ -78,7 +100,8 @@ module cputop (clk,switch,reset,uart_stage,led,confirm,confirm_a,confirm_b,rx,tx
     //clock
     wire clock;
     wire clock_uart;
-    wire clock_100;
+    frequency #(10) uart_clock(clk, 1'b1,clock_uart);
+    frequency #(6) cpu_clock(clk, 1'b1,clock);
 
     //MemOrIO
     wire LEDCtrl;
@@ -102,23 +125,23 @@ module cputop (clk,switch,reset,uart_stage,led,confirm,confirm_a,confirm_b,rx,tx
     wire confirm_b_key_value;
 
     key_debounce key_confirm(
-    .sys_clk(clock_100),
+    .sys_clk(clk),
     .key(confirm), 
     .key_value(confirm_key_value) 
     );
     key_debounce key_confirm_a(
-    .sys_clk(clock_100),
+    .sys_clk(clk),
     .key(confirm_a), 
     .key_value(confirm_a_key_value) 
     );
     key_debounce key_confirm_b(
-    .sys_clk(clock_100),
+    .sys_clk(clk),
     .key(confirm_b), 
     .key_value(confirm_b_key_value) 
     );
 
     stage_control stage_controll(
-        .clk(clock_100),
+        .clk(clk),
         .reset(reset),
         .uart_stage(uart_stage),
         .rst(rst),
@@ -170,14 +193,6 @@ module cputop (clk,switch,reset,uart_stage,led,confirm,confirm_a,confirm_b,rx,tx
         .upg_adr_i(upg_adr_o[13:0]),
         .upg_dat_i(upg_dat_o),
         .upg_done_i(upg_done_o)
-    );
-
-    
-    cpuclk clk_ip(
-        .clk_in1(clk),
-        .clk_out1(clock),
-        .clk_out2(clock_100),
-        .clk_out3(clock_uart)
     );
 
     control32 controller(
@@ -243,7 +258,7 @@ module cputop (clk,switch,reset,uart_stage,led,confirm,confirm_a,confirm_b,rx,tx
         .ioWrite(IOWrite),
         .addr_in(ALU_Result), 
         .m_rdata(read_dataFromMemory), //从mem过来的data
-        .io_rdata({8'b0000_0000,switch[23:21],confirm_key_value,confirm_a_key_value,confirm_b_key_value,switch[17:0]}),//从io过来的data 
+        .io_rdata({8'b0000_0000,out_value_left,confirm_key_value,confirm_a_key_value,confirm_b_key_value,switch[17:16],out_value_right}),//从io过来的data 
         .r_wdata(read_dataFromMemoryOrIo), //写回给decoder的值 
         .r_rdata(read_data_2), //从decoder中过来的data
         .write_data(write_dataToMemoryOrIo),//写回给io或者mem中的值，就是上面的r_rdata(需要用这个信号时，这个信号没变)
@@ -254,12 +269,12 @@ module cputop (clk,switch,reset,uart_stage,led,confirm,confirm_a,confirm_b,rx,tx
 
     //第18个是回文亮灯
     ioWrite32 ioWrite(
-        .writeData({rst,start_pg,confirm_key_value|confirm_a_key_value|confirm_b_key_value,write_dataToMemoryOrIo[20:0]}),
+        .writeData({rst,start_pg,(confirm_key_value|confirm_a_key_value|confirm_b_key_value)&~rst,switch[20]&~rst,write_dataToMemoryOrIo[19:0]}),
         .clock(clock),
         .reset(rst),
         .ioWrite(IOWrite),
-        .stage_io(led[23:21]),
-        .dataToio(led[20:0])
+        .stage_io(led[23:20]),
+        .dataToio(led[19:0])
     );
 
 endmodule
