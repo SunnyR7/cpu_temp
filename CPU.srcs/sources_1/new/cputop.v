@@ -1,6 +1,3 @@
-`timescale 1ns / 1ps
-
-
 module cputop (clk,switch,reset,uart_stage,led,confirm,confirm_a,confirm_b,rx,tx,key_backspace,row,col_n,tube_char,tube_switch);
     input clk;
     // input confirm;
@@ -92,6 +89,8 @@ module cputop (clk,switch,reset,uart_stage,led,confirm,confirm_a,confirm_b,rx,tx
 
     //executs32
     wire[31:0] Addr_Result; //ALU中计算得到，给ifetch的跳转地址
+    wire[31:0] hi;//mul,div使用的寄存器
+    wire[31:0] lo;
 
     //dmemory32
     wire[31:0] read_dataFromMemory; 
@@ -235,7 +234,9 @@ module cputop (clk,switch,reset,uart_stage,led,confirm,confirm_a,confirm_b,rx,tx
         .Zero(Zero),
         .ALU_Result(ALU_Result),
         .Addr_Result(Addr_Result),
-        .PC_plus_4(branch_base_addr)
+        .PC_plus_4(branch_base_addr),
+        .hi(hi),
+        .lo(lo)
     );
 
     decode32 decoder(
@@ -251,7 +252,9 @@ module cputop (clk,switch,reset,uart_stage,led,confirm,confirm_a,confirm_b,rx,tx
         .Sign_extend(sign_extend),
         .clock(clock),
         .reset(rst),
-        .opcplus4(link_addr)
+        .opcplus4(link_addr),
+        .hi_from_ALU(hi),
+        .lo_from_ALU(lo)
     );
 
     MemOrIO memOrio( 

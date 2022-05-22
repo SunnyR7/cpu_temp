@@ -66,8 +66,9 @@ set ACTIVE_STEP write_bitstream
 set rc [catch {
   create_msg_db write_bitstream.pb
   set_param general.maxThreads 6
+  set_param xicom.use_bs_reader 1
   open_checkpoint cputop_routed.dcp
-  set_property webtalk.parent_dir D:/VivadoProCS202/CPU2/cpu_temp/CPU.cache/wt [current_project]
+  set_property webtalk.parent_dir D:/VivadoProCS202/CPU/CPU.cache/wt [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
   catch { write_mem_info -force cputop.mmi }
   write_bitstream -force cputop.bit 
