@@ -1,13 +1,16 @@
 `timescale 1ns / 1ps
 
 
-module cputop (clk,switch,reset,uart_stage,led,rx,tx);
+module cputop (clk,switch,reset,uart_stage,led,confirm,confirm_a,confirm_b,rx,tx);
     input clk;
     // input confirm;
     input[23:0] switch;
     input reset;
     input uart_stage;
     output[23:0] led;
+    input confirm;
+    input confirm_a;
+    input confirm_b;
     input rx;
     output tx;
     //input是uart接口传入，这个每次传1bit
@@ -93,6 +96,26 @@ module cputop (clk,switch,reset,uart_stage,led,rx,tx);
     wire [14:0] upg_adr_o;
     //data to program_rom or dmemory32
     wire [31:0] upg_dat_o;
+
+    wire confirm_key_value;
+    wire confirm_a_key_value;
+    wire confirm_b_key_value;
+
+    key_debounce key_confirm(
+    .sys_clk(clock_100),
+    .key(confirm), 
+    .key_value(confirm_key_value) 
+    );
+    key_debounce key_confirm_a(
+    .sys_clk(clock_100),
+    .key(confirm_a), 
+    .key_value(confirm_a_key_value) 
+    );
+    key_debounce key_confirm_b(
+    .sys_clk(clock_100),
+    .key(confirm_b), 
+    .key_value(confirm_b_key_value) 
+    );
 
     stage_control stage_controll(
         .clk(clock_100),
@@ -220,7 +243,7 @@ module cputop (clk,switch,reset,uart_stage,led,rx,tx);
         .ioWrite(IOWrite),
         .addr_in(ALU_Result), 
         .m_rdata(read_dataFromMemory), //从mem过来的data
-        .io_rdata({8'b0000_0000,switch}),//从io过来的data 
+        .io_rdata({8'b0000_0000,switch[23:21],confirm_key_value,confirm_a_key_value,confirm_b_key_value,switch[17:0]}),//从io过来的data 
         .r_wdata(read_dataFromMemoryOrIo), //写回给decoder的值 
         .r_rdata(read_data_2), //从decoder中过来的data
         .write_data(write_dataToMemoryOrIo),//写回给io或者mem中的值，就是上面的r_rdata(需要用这个信号时，这个信号没变)
@@ -229,14 +252,14 @@ module cputop (clk,switch,reset,uart_stage,led,rx,tx);
     );
 
 
-
+    //第18个是回文亮灯
     ioWrite32 ioWrite(
-        .writeData({rst,start_pg,write_dataToMemoryOrIo[21:0]}),
+        .writeData({rst,start_pg,confirm_key_value|confirm_a_key_value|confirm_b_key_value,write_dataToMemoryOrIo[20:0]}),
         .clock(clock),
         .reset(rst),
         .ioWrite(IOWrite),
-        .stage_io(led[23:22]),
-        .dataToio(led[21:0])
+        .stage_io(led[23:21]),
+        .dataToio(led[20:0])
     );
 
 endmodule

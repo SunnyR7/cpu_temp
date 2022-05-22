@@ -10,6 +10,13 @@ set_property PACKAGE_PIN P20 [get_ports {reset}]
 set_property IOSTANDARD LVCMOS33 [get_ports {uart_stage}]
 set_property PACKAGE_PIN P5 [get_ports {uart_stage}]
 
+set_property IOSTANDARD LVCMOS33 [get_ports {confirm}]
+set_property PACKAGE_PIN P1 [get_ports {confirm}]
+set_property IOSTANDARD LVCMOS33 [get_ports {confirm_a}]
+set_property PACKAGE_PIN P4 [get_ports {confirm_a}]
+set_property IOSTANDARD LVCMOS33 [get_ports {confirm_b}]
+set_property PACKAGE_PIN R1 [get_ports {confirm_b}]
+
 set_property IOSTANDARD LVCMOS33 [get_ports {switch[23]}]
 set_property PACKAGE_PIN Y9 [get_ports {switch[23]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {switch[22]}]

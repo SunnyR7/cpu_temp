@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-| Date                      : Sat May 21 17:45:41 2022
+| Date                      : Sat May 21 23:12:56 2022
 | Host                      : LAPTOP-8IF7AABH running 64-bit major release  (build 9200)
 | Command                   : report_io -file cputop_io_placed.rpt
 | Design                    : cputop
@@ -25,7 +25,7 @@ Table of Contents
 +---------------+
 | Total User IO |
 +---------------+
-|            53 |
+|            56 |
 +---------------+
 
 
@@ -365,10 +365,10 @@ Table of Contents
 | N20        | led[17]     | High Range | IO_L18P_T2_A24_15            | OUTPUT        | LVCMOS33    |      15 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | N21        |             | High Range | VCCO_15                      | VCCO          |             |      15 |            |      |                     |                      |    3.30 |            |           |          |      |                  |              |                   |              |
 | N22        |             | High Range | IO_L15P_T2_DQS_15            | User IO       |             |      15 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
-| P1         |             | High Range | IO_L20N_T3_35                | User IO       |             |      35 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
+| P1         | confirm     | High Range | IO_L20N_T3_35                | INPUT         | LVCMOS33    |      35 |            |      |                     |                 NONE |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | P2         |             | High Range | IO_L22P_T3_35                | User IO       |             |      35 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | P3         |             |            | GND                          | GND           |             |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |              |                   |              |
-| P4         |             | High Range | IO_L21N_T3_DQS_35            | User IO       |             |      35 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
+| P4         | confirm_a   | High Range | IO_L21N_T3_DQS_35            | INPUT         | LVCMOS33    |      35 |            |      |                     |                 NONE |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | P5         | uart_stage  | High Range | IO_L21P_T3_DQS_35            | INPUT         | LVCMOS33    |      35 |            |      |                     |                 NONE |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | P6         |             | High Range | IO_L24P_T3_35                | User IO       |             |      35 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | P7         |             |            | GND                          | GND           |             |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |              |                   |              |
@@ -387,7 +387,7 @@ Table of Contents
 | P20        | reset       | High Range | IO_0_14                      | INPUT         | LVCMOS33    |      14 |            |      |                     |                 NONE |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | P21        |             | High Range | IO_L2P_T0_D02_14             | User IO       |             |      14 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | P22        |             | High Range | IO_L1P_T0_D00_MOSI_14        | User IO       |             |      14 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
-| R1         |             | High Range | IO_L20P_T3_35                | User IO       |             |      35 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
+| R1         | confirm_b   | High Range | IO_L20P_T3_35                | INPUT         | LVCMOS33    |      35 |            |      |                     |                 NONE |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | R2         |             | High Range | IO_L3N_T0_DQS_34             | User IO       |             |      34 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | R3         |             | High Range | IO_L3P_T0_DQS_34             | User IO       |             |      34 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | R4         | switch[1]   | High Range | IO_L13P_T2_MRCC_34           | INPUT         | LVCMOS33    |      34 |            |      |                     |                 NONE |         | FIXED      |           |          |      | NONE             |              |                   |              |

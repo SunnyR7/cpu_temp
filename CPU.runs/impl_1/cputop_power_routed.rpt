@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-| Date             : Sat May 21 17:50:06 2022
+| Date             : Sun May 22 00:21:03 2022
 | Host             : LAPTOP-8IF7AABH running 64-bit major release  (build 9200)
 | Command          : report_power -file cputop_power_routed.rpt -pb cputop_power_summary_routed.pb -rpx cputop_power_routed.rpx
 | Design           : cputop
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.213        |
+| Total On-Chip Power (W)  | 0.215        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.114        |
+| Dynamic (W)              | 0.116        |
 | Device Static (W)        | 0.099        |
 | Effective TJA (C/W)      | 2.7          |
 | Max Ambient (C)          | 84.4         |
@@ -52,21 +52,21 @@ Table of Contents
 +-------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
-| Clocks                  |     0.004 |        7 |       --- |             --- |
-| Slice Logic             |     0.003 |     4949 |       --- |             --- |
-|   LUT as Logic          |     0.003 |     2583 |     63400 |            4.07 |
-|   CARRY4                |    <0.001 |       54 |     15850 |            0.34 |
-|   Register              |    <0.001 |     1511 |    126800 |            1.19 |
-|   F7/F8 Muxes           |    <0.001 |      257 |     63400 |            0.41 |
+| Clocks                  |     0.005 |        7 |       --- |             --- |
+| Slice Logic             |     0.004 |     5235 |       --- |             --- |
+|   LUT as Logic          |     0.003 |     2686 |     63400 |            4.24 |
+|   CARRY4                |    <0.001 |       69 |     15850 |            0.44 |
+|   Register              |    <0.001 |     1575 |    126800 |            1.24 |
+|   F7/F8 Muxes           |    <0.001 |      356 |     63400 |            0.56 |
 |   BUFG                  |    <0.001 |        1 |        32 |            3.13 |
 |   LUT as Shift Register |    <0.001 |       10 |     19000 |            0.05 |
-|   Others                |     0.000 |      131 |       --- |             --- |
-| Signals                 |     0.005 |     4168 |       --- |             --- |
+|   Others                |     0.000 |      137 |       --- |             --- |
+| Signals                 |     0.005 |     4399 |       --- |             --- |
 | Block RAM               |     0.005 |       29 |       135 |           21.48 |
 | PLL                     |     0.097 |        1 |         6 |           16.67 |
 | I/O                     |    <0.001 |       53 |       285 |           18.60 |
 | Static Power            |     0.099 |          |           |                 |
-| Total                   |     0.213 |          |           |                 |
+| Total                   |     0.215 |          |           |                 |
 +-------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -76,7 +76,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.038 |       0.022 |      0.016 |
+| Vccint    |       1.000 |     0.040 |       0.024 |      0.016 |
 | Vccaux    |       1.800 |     0.069 |       0.051 |      0.018 |
 | Vcco33    |       3.300 |     0.004 |       0.000 |      0.004 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -149,7 +149,7 @@ Table of Contents
 +---------------------------------------------------------------------------------+-----------+
 | Name                                                                            | Power (W) |
 +---------------------------------------------------------------------------------+-----------+
-| cputop                                                                          |     0.114 |
+| cputop                                                                          |     0.116 |
 |   alu                                                                           |    <0.001 |
 |   clk_ip                                                                        |     0.098 |
 |     inst                                                                        |     0.098 |
@@ -231,8 +231,11 @@ Table of Contents
 |               ramloop[9].ram.r                                                  |    <0.001 |
 |                 prim_init.ram                                                   |    <0.001 |
 |   ioWrite                                                                       |    <0.001 |
+|   key_confirm                                                                   |    <0.001 |
+|   key_confirm_a                                                                 |    <0.001 |
+|   key_confirm_b                                                                 |    <0.001 |
 |   memOrio                                                                       |    <0.001 |
-|   stage_controll                                                                |     0.003 |
+|   stage_controll                                                                |     0.002 |
 |     rst_key                                                                     |    <0.001 |
 |     uart_key                                                                    |    <0.001 |
 |   uart                                                                          |    <0.001 |
