@@ -50,29 +50,32 @@ assign out_value_left=(sw[20]==1'b1)?sw[23:21]:value_from_tube[2:0];
 
 reg [3:0] value_decoder;
 
-always@(*)
+always@(posedge clk)
     begin
-        case (key_seg)
-            8'b01000000:value_decoder=4'b0000;
-            8'b01111001:value_decoder=4'b0001;
-            8'b00100100:value_decoder=4'b0010;
-            8'b00110000:value_decoder=4'b0011;
+        if(key_pressed_flag)
+        begin
+            case (key_seg)
+            8'b01000000:value_decoder<=4'b0000;
+            8'b01111001:value_decoder<=4'b0001;
+            8'b00100100:value_decoder<=4'b0010;
+            8'b00110000:value_decoder<=4'b0011;
              
-            8'b00011001:value_decoder=4'b0100;
-            8'b00010010:value_decoder=4'b0101;
-            8'b00000010:value_decoder=4'b0110;
-            8'b01111000:value_decoder=4'b0111;
+            8'b00011001:value_decoder<=4'b0100;
+            8'b00010010:value_decoder<=4'b0101;
+            8'b00000010:value_decoder<=4'b0110;
+            8'b01111000:value_decoder<=4'b0111;
             
-            8'b00000000:value_decoder=4'b1000;
-            8'b00010000:value_decoder=4'b1001;
-            8'b00001000:value_decoder=4'b1010;
-            8'b00000011:value_decoder=4'b1011;
+            8'b00000000:value_decoder<=4'b1000;
+            8'b00010000:value_decoder<=4'b1001;
+            8'b00001000:value_decoder<=4'b1010;
+            8'b00000011:value_decoder<=4'b1011;
 
-            8'b01000110:value_decoder=4'b1100;
-            8'b00010001:value_decoder=4'b1101;
-            8'b00000110:value_decoder=4'b1110;
-            8'b00001110:value_decoder=4'b1111;
+            8'b01000110:value_decoder<=4'b1100;
+            8'b00010001:value_decoder<=4'b1101;
+            8'b00000110:value_decoder<=4'b1110;
+            8'b00001110:value_decoder<=4'b1111;
           endcase
+        end
     end
 
 always @(posedge clk)

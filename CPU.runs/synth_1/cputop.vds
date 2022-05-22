@@ -2,8 +2,8 @@
 # Vivado v2017.4 (64-bit)
 # SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
 # IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
-# Start of session at: Sun May 22 14:59:50 2022
-# Process ID: 3152
+# Start of session at: Sun May 22 18:33:02 2022
+# Process ID: 16300
 # Current directory: D:/VivadoProCS202/CPU/CPU.runs/synth_1
 # Command line: vivado.exe -log cputop.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source cputop.tcl
 # Log file: D:/VivadoProCS202/CPU/CPU.runs/synth_1/cputop.vds
@@ -15,10 +15,10 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 15128 
+INFO: Helper process launched with PID 1412 
 WARNING: [Synth 8-992] rst is already implicitly declared earlier [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:51]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 354.758 ; gain = 111.887
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 353.906 ; gain = 113.137
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'cputop' [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:4]
 INFO: [Synth 8-638] synthesizing module 'ioRead' [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/ioRead.v:3]
@@ -52,7 +52,7 @@ INFO: [Synth 8-155] case statement is not full and has no default [D:/VivadoProC
 WARNING: [Synth 8-5788] Register col_val_reg in module keyboard is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/keyboard.v:99]
 WARNING: [Synth 8-5788] Register row_val_reg in module keyboard is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/keyboard.v:100]
 INFO: [Synth 8-256] done synthesizing module 'keyboard' (4#1) [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/keyboard.v:4]
-INFO: [Synth 8-155] case statement is not full and has no default [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/ioRead.v:55]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/ioRead.v:57]
 INFO: [Synth 8-256] done synthesizing module 'ioRead' (5#1) [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/ioRead.v:3]
 INFO: [Synth 8-638] synthesizing module 'frequency__parameterized0' [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/frequency.v:4]
 	Parameter dividedBy bound to: 10 - type: integer 
@@ -62,15 +62,15 @@ INFO: [Synth 8-638] synthesizing module 'frequency__parameterized1' [D:/VivadoPr
 INFO: [Synth 8-256] done synthesizing module 'frequency__parameterized1' (5#1) [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/frequency.v:4]
 INFO: [Synth 8-638] synthesizing module 'stage_control' [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/stage_control.v:3]
 INFO: [Synth 8-256] done synthesizing module 'stage_control' (6#1) [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/stage_control.v:3]
-INFO: [Synth 8-638] synthesizing module 'uart' [D:/VivadoProCS202/CPU/CPU.runs/synth_1/.Xil/Vivado-3152-LAPTOP-8IF7AABH/realtime/uart_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'uart' (7#1) [D:/VivadoProCS202/CPU/CPU.runs/synth_1/.Xil/Vivado-3152-LAPTOP-8IF7AABH/realtime/uart_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'uart' [D:/VivadoProCS202/CPU/CPU.runs/synth_1/.Xil/Vivado-16300-LAPTOP-8IF7AABH/realtime/uart_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'uart' (7#1) [D:/VivadoProCS202/CPU/CPU.runs/synth_1/.Xil/Vivado-16300-LAPTOP-8IF7AABH/realtime/uart_stub.v:6]
 INFO: [Synth 8-638] synthesizing module 'Ifetc32' [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/Ifetc32.v:3]
-INFO: [Synth 8-638] synthesizing module 'prgrom' [D:/VivadoProCS202/CPU/CPU.runs/synth_1/.Xil/Vivado-3152-LAPTOP-8IF7AABH/realtime/prgrom_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'prgrom' (8#1) [D:/VivadoProCS202/CPU/CPU.runs/synth_1/.Xil/Vivado-3152-LAPTOP-8IF7AABH/realtime/prgrom_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'prgrom' [D:/VivadoProCS202/CPU/CPU.runs/synth_1/.Xil/Vivado-16300-LAPTOP-8IF7AABH/realtime/prgrom_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'prgrom' (8#1) [D:/VivadoProCS202/CPU/CPU.runs/synth_1/.Xil/Vivado-16300-LAPTOP-8IF7AABH/realtime/prgrom_stub.v:6]
 INFO: [Synth 8-256] done synthesizing module 'Ifetc32' (9#1) [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/Ifetc32.v:3]
 INFO: [Synth 8-638] synthesizing module 'dmemory32' [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/dmemory32.v:3]
-INFO: [Synth 8-638] synthesizing module 'RAM' [D:/VivadoProCS202/CPU/CPU.runs/synth_1/.Xil/Vivado-3152-LAPTOP-8IF7AABH/realtime/RAM_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'RAM' (10#1) [D:/VivadoProCS202/CPU/CPU.runs/synth_1/.Xil/Vivado-3152-LAPTOP-8IF7AABH/realtime/RAM_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'RAM' [D:/VivadoProCS202/CPU/CPU.runs/synth_1/.Xil/Vivado-16300-LAPTOP-8IF7AABH/realtime/RAM_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'RAM' (10#1) [D:/VivadoProCS202/CPU/CPU.runs/synth_1/.Xil/Vivado-16300-LAPTOP-8IF7AABH/realtime/RAM_stub.v:6]
 INFO: [Synth 8-256] done synthesizing module 'dmemory32' (11#1) [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/dmemory32.v:3]
 INFO: [Synth 8-638] synthesizing module 'control32' [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/control32.v:3]
 INFO: [Synth 8-256] done synthesizing module 'control32' (12#1) [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/control32.v:3]
@@ -149,7 +149,7 @@ WARNING: [Synth 8-3331] design ioRead has unconnected port sw[18]
 WARNING: [Synth 8-3331] design ioRead has unconnected port sw[17]
 WARNING: [Synth 8-3331] design ioRead has unconnected port sw[16]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 410.090 ; gain = 167.219
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 408.941 ; gain = 168.172
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -191,19 +191,19 @@ WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[2] to constant 0 [
 WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[1] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:162]
 WARNING: [Synth 8-3295] tying undriven pin ifetch:Read_data_1[0] to constant 0 [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/cputop.v:162]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 410.090 ; gain = 167.219
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 408.941 ; gain = 168.172
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a100tfgg484-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [D:/VivadoProCS202/CPU/CPU.runs/synth_1/.Xil/Vivado-3152-LAPTOP-8IF7AABH/dcp3/RAM_in_context.xdc] for cell 'dmemory/ram'
-Finished Parsing XDC File [D:/VivadoProCS202/CPU/CPU.runs/synth_1/.Xil/Vivado-3152-LAPTOP-8IF7AABH/dcp3/RAM_in_context.xdc] for cell 'dmemory/ram'
-Parsing XDC File [D:/VivadoProCS202/CPU/CPU.runs/synth_1/.Xil/Vivado-3152-LAPTOP-8IF7AABH/dcp4/prgrom_in_context.xdc] for cell 'ifetch/instmem'
-Finished Parsing XDC File [D:/VivadoProCS202/CPU/CPU.runs/synth_1/.Xil/Vivado-3152-LAPTOP-8IF7AABH/dcp4/prgrom_in_context.xdc] for cell 'ifetch/instmem'
-Parsing XDC File [D:/VivadoProCS202/CPU/CPU.runs/synth_1/.Xil/Vivado-3152-LAPTOP-8IF7AABH/dcp5/uart_in_context.xdc] for cell 'uart'
-Finished Parsing XDC File [D:/VivadoProCS202/CPU/CPU.runs/synth_1/.Xil/Vivado-3152-LAPTOP-8IF7AABH/dcp5/uart_in_context.xdc] for cell 'uart'
+Parsing XDC File [D:/VivadoProCS202/CPU/CPU.runs/synth_1/.Xil/Vivado-16300-LAPTOP-8IF7AABH/dcp3/RAM_in_context.xdc] for cell 'dmemory/ram'
+Finished Parsing XDC File [D:/VivadoProCS202/CPU/CPU.runs/synth_1/.Xil/Vivado-16300-LAPTOP-8IF7AABH/dcp3/RAM_in_context.xdc] for cell 'dmemory/ram'
+Parsing XDC File [D:/VivadoProCS202/CPU/CPU.runs/synth_1/.Xil/Vivado-16300-LAPTOP-8IF7AABH/dcp4/prgrom_in_context.xdc] for cell 'ifetch/instmem'
+Finished Parsing XDC File [D:/VivadoProCS202/CPU/CPU.runs/synth_1/.Xil/Vivado-16300-LAPTOP-8IF7AABH/dcp4/prgrom_in_context.xdc] for cell 'ifetch/instmem'
+Parsing XDC File [D:/VivadoProCS202/CPU/CPU.runs/synth_1/.Xil/Vivado-16300-LAPTOP-8IF7AABH/dcp5/uart_in_context.xdc] for cell 'uart'
+Finished Parsing XDC File [D:/VivadoProCS202/CPU/CPU.runs/synth_1/.Xil/Vivado-16300-LAPTOP-8IF7AABH/dcp5/uart_in_context.xdc] for cell 'uart'
 Parsing XDC File [D:/VivadoProCS202/CPU/CPU.srcs/constrs_1/new/cputop.xdc]
 Finished Parsing XDC File [D:/VivadoProCS202/CPU/CPU.srcs/constrs_1/new/cputop.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/VivadoProCS202/CPU/CPU.srcs/constrs_1/new/cputop.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/cputop_propImpl.xdc].
@@ -213,16 +213,16 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 767.184 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 766.680 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 767.184 ; gain = 524.312
+Finished Constraint Validation : Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 766.680 ; gain = 525.910
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tfgg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 767.184 ; gain = 524.312
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 766.680 ; gain = 525.910
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -231,7 +231,7 @@ Applied set_property DONT_TOUCH = true for dmemory/ram. (constraint file  auto g
 Applied set_property DONT_TOUCH = true for ifetch/instmem. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for uart. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 767.184 ; gain = 524.312
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 766.680 ; gain = 525.910
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5546] ROM "key_value" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5545] ROM "cnt" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
@@ -258,10 +258,9 @@ INFO: [Synth 8-5546] ROM "Jal" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/executs32.v:39]
 INFO: [Synth 8-5545] ROM "Zero" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 WARNING: [Synth 8-327] inferring latch for variable 'next_state_reg' [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/keyboard.v:43]
-WARNING: [Synth 8-327] inferring latch for variable 'value_decoder_reg' [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/ioRead.v:56]
 WARNING: [Synth 8-327] inferring latch for variable 'write_data_reg' [D:/VivadoProCS202/CPU/CPU.srcs/sources_1/new/MemOrIO.v:34]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 767.184 ; gain = 524.312
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:30 ; elapsed = 00:00:30 . Memory (MB): peak = 766.680 ; gain = 525.910
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -285,7 +284,7 @@ Detailed RTL Component Info :
 	               20 Bit    Registers := 7     
 	               16 Bit    Registers := 2     
 	                6 Bit    Registers := 1     
-	                4 Bit    Registers := 4     
+	                4 Bit    Registers := 5     
 	                3 Bit    Registers := 1     
 	                1 Bit    Registers := 19    
 +---Muxes : 
@@ -362,6 +361,7 @@ Detailed RTL Component Info :
 +---Registers : 
 	               32 Bit    Registers := 2     
 	               16 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
 +---Muxes : 
 	   3 Input     32 Bit        Muxes := 1     
 	   2 Input     32 Bit        Muxes := 1     
@@ -497,41 +497,41 @@ WARNING: [Synth 8-3332] Sequential element (memOrio/write_data_reg[23]) is unuse
 WARNING: [Synth 8-3332] Sequential element (memOrio/write_data_reg[22]) is unused and will be removed from module cputop.
 WARNING: [Synth 8-3332] Sequential element (memOrio/write_data_reg[21]) is unused and will be removed from module cputop.
 WARNING: [Synth 8-3332] Sequential element (memOrio/write_data_reg[20]) is unused and will be removed from module cputop.
-INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][13]' (FDE) to 'decoder/registers_reg[0][31]'
-INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][14]' (FDE) to 'decoder/registers_reg[0][31]'
-INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][11]' (FDE) to 'decoder/registers_reg[0][31]'
-INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][12]' (FDE) to 'decoder/registers_reg[0][31]'
-INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][17]' (FDE) to 'decoder/registers_reg[0][31]'
-INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][18]' (FDE) to 'decoder/registers_reg[0][31]'
-INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][19]' (FDE) to 'decoder/registers_reg[0][31]'
-INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][20]' (FDE) to 'decoder/registers_reg[0][31]'
-INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][9]' (FDE) to 'decoder/registers_reg[0][31]'
-INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][10]' (FDE) to 'decoder/registers_reg[0][31]'
-INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][6]' (FDE) to 'decoder/registers_reg[0][31]'
-INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][7]' (FDE) to 'decoder/registers_reg[0][31]'
-INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][5]' (FDE) to 'decoder/registers_reg[0][31]'
-INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][8]' (FDE) to 'decoder/registers_reg[0][31]'
-INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][21]' (FDE) to 'decoder/registers_reg[0][31]'
-INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][15]' (FDE) to 'decoder/registers_reg[0][31]'
-INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][16]' (FDE) to 'decoder/registers_reg[0][31]'
-INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][0]' (FDE) to 'decoder/registers_reg[0][31]'
-INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][4]' (FDE) to 'decoder/registers_reg[0][31]'
-INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][3]' (FDE) to 'decoder/registers_reg[0][31]'
-INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][2]' (FDE) to 'decoder/registers_reg[0][31]'
-INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][1]' (FDE) to 'decoder/registers_reg[0][31]'
-INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][28]' (FDE) to 'decoder/registers_reg[0][31]'
-INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][24]' (FDE) to 'decoder/registers_reg[0][31]'
-INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][26]' (FDE) to 'decoder/registers_reg[0][31]'
 INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][30]' (FDE) to 'decoder/registers_reg[0][31]'
-INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][22]' (FDE) to 'decoder/registers_reg[0][31]'
 INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][29]' (FDE) to 'decoder/registers_reg[0][31]'
-INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][25]' (FDE) to 'decoder/registers_reg[0][31]'
-INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][27]' (FDE) to 'decoder/registers_reg[0][31]'
-INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][31]' (FDE) to 'decoder/registers_reg[0][23]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (decoder/\registers_reg[0][23] )
-WARNING: [Synth 8-3332] Sequential element (registers_reg[0][23]) is unused and will be removed from module decode32.
+INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][31]' (FDE) to 'decoder/registers_reg[0][28]'
+INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][0]' (FDE) to 'decoder/registers_reg[0][28]'
+INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][1]' (FDE) to 'decoder/registers_reg[0][28]'
+INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][2]' (FDE) to 'decoder/registers_reg[0][28]'
+INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][3]' (FDE) to 'decoder/registers_reg[0][28]'
+INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][4]' (FDE) to 'decoder/registers_reg[0][28]'
+INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][5]' (FDE) to 'decoder/registers_reg[0][28]'
+INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][6]' (FDE) to 'decoder/registers_reg[0][28]'
+INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][7]' (FDE) to 'decoder/registers_reg[0][28]'
+INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][8]' (FDE) to 'decoder/registers_reg[0][28]'
+INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][9]' (FDE) to 'decoder/registers_reg[0][28]'
+INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][10]' (FDE) to 'decoder/registers_reg[0][28]'
+INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][11]' (FDE) to 'decoder/registers_reg[0][28]'
+INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][13]' (FDE) to 'decoder/registers_reg[0][28]'
+INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][14]' (FDE) to 'decoder/registers_reg[0][28]'
+INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][15]' (FDE) to 'decoder/registers_reg[0][28]'
+INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][16]' (FDE) to 'decoder/registers_reg[0][28]'
+INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][17]' (FDE) to 'decoder/registers_reg[0][28]'
+INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][18]' (FDE) to 'decoder/registers_reg[0][28]'
+INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][19]' (FDE) to 'decoder/registers_reg[0][28]'
+INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][20]' (FDE) to 'decoder/registers_reg[0][28]'
+INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][21]' (FDE) to 'decoder/registers_reg[0][28]'
+INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][22]' (FDE) to 'decoder/registers_reg[0][28]'
+INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][23]' (FDE) to 'decoder/registers_reg[0][28]'
+INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][24]' (FDE) to 'decoder/registers_reg[0][28]'
+INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][25]' (FDE) to 'decoder/registers_reg[0][28]'
+INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][26]' (FDE) to 'decoder/registers_reg[0][28]'
+INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][27]' (FDE) to 'decoder/registers_reg[0][28]'
+INFO: [Synth 8-3886] merging instance 'decoder/registers_reg[0][28]' (FDE) to 'decoder/registers_reg[0][12]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (decoder/\registers_reg[0][12] )
+WARNING: [Synth 8-3332] Sequential element (registers_reg[0][12]) is unused and will be removed from module decode32.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:47 ; elapsed = 00:00:48 . Memory (MB): peak = 767.184 ; gain = 524.312
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:06 ; elapsed = 00:01:06 . Memory (MB): peak = 766.680 ; gain = 525.910
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -543,13 +543,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:55 ; elapsed = 00:00:56 . Memory (MB): peak = 840.277 ; gain = 597.406
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:17 ; elapsed = 00:01:17 . Memory (MB): peak = 824.957 ; gain = 584.188
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:56 ; elapsed = 00:00:57 . Memory (MB): peak = 845.039 ; gain = 602.168
+Finished Timing Optimization : Time (s): cpu = 00:01:18 ; elapsed = 00:01:19 . Memory (MB): peak = 829.652 ; gain = 588.883
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -561,7 +561,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:02 ; elapsed = 00:01:02 . Memory (MB): peak = 962.812 ; gain = 719.941
+Finished Technology Mapping : Time (s): cpu = 00:01:25 ; elapsed = 00:01:26 . Memory (MB): peak = 941.410 ; gain = 700.641
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -585,7 +585,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:03 ; elapsed = 00:01:03 . Memory (MB): peak = 962.812 ; gain = 719.941
+Finished IO Insertion : Time (s): cpu = 00:01:27 ; elapsed = 00:01:27 . Memory (MB): peak = 941.410 ; gain = 700.641
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -598,7 +598,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:03 ; elapsed = 00:01:03 . Memory (MB): peak = 962.812 ; gain = 719.941
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:27 ; elapsed = 00:01:27 . Memory (MB): peak = 941.410 ; gain = 700.641
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -610,25 +610,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:03 ; elapsed = 00:01:03 . Memory (MB): peak = 962.812 ; gain = 719.941
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:27 ; elapsed = 00:01:28 . Memory (MB): peak = 941.410 ; gain = 700.641
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:03 ; elapsed = 00:01:04 . Memory (MB): peak = 962.812 ; gain = 719.941
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:27 ; elapsed = 00:01:28 . Memory (MB): peak = 941.410 ; gain = 700.641
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:04 ; elapsed = 00:01:04 . Memory (MB): peak = 962.812 ; gain = 719.941
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:28 ; elapsed = 00:01:28 . Memory (MB): peak = 941.410 ; gain = 700.641
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:04 ; elapsed = 00:01:04 . Memory (MB): peak = 962.812 ; gain = 719.941
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:28 ; elapsed = 00:01:28 . Memory (MB): peak = 941.410 ; gain = 700.641
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -653,18 +653,18 @@ Report Cell Usage:
 |4     |BUFG   |     2|
 |5     |CARRY4 |    83|
 |6     |LUT1   |   125|
-|7     |LUT2   |   160|
-|8     |LUT3   |   277|
-|9     |LUT4   |   479|
-|10    |LUT5   |   701|
-|11    |LUT6   |  1937|
-|12    |MUXF7  |   258|
-|13    |MUXF8  |   112|
+|7     |LUT2   |   170|
+|8     |LUT3   |   317|
+|9     |LUT4   |   445|
+|10    |LUT5   |   722|
+|11    |LUT6   |  1819|
+|12    |MUXF7  |   273|
+|13    |MUXF8  |   104|
 |14    |FDCE   |    70|
 |15    |FDPE   |     1|
-|16    |FDRE   |  1309|
+|16    |FDRE   |  1313|
 |17    |FDSE   |    70|
-|18    |LD     |    30|
+|18    |LD     |    26|
 |19    |IBUF   |    34|
 |20    |OBUF   |    45|
 +------+-------+------+
@@ -673,12 +673,12 @@ Report Instance Areas:
 +------+-----------------+--------------------------+------+
 |      |Instance         |Module                    |Cells |
 +------+-----------------+--------------------------+------+
-|1     |top              |                          |  5808|
+|1     |top              |                          |  5734|
 |2     |  alu            |executs32                 |    16|
 |3     |  cpu_clock      |frequency__parameterized1 |    52|
-|4     |  decoder        |decode32                  |  2235|
-|5     |  dmemory        |dmemory32                 |    32|
-|6     |  ifetch         |Ifetc32                   |  2421|
+|4     |  decoder        |decode32                  |  2240|
+|5     |  dmemory        |dmemory32                 |    34|
+|6     |  ifetch         |Ifetc32                   |  2331|
 |7     |  ioWrite        |ioWrite32                 |    20|
 |8     |  key_confirm    |key_debounce              |    61|
 |9     |  key_confirm_a  |key_debounce_0            |    62|
@@ -689,33 +689,33 @@ Report Instance Areas:
 |14    |    key1         |key_debounce_4            |    96|
 |15    |    tube         |tubeDriver                |   112|
 |16    |      clock_f1   |frequency                 |    82|
-|17    |  stage_controll |stage_control             |   228|
+|17    |  stage_controll |stage_control             |   237|
 |18    |    rst_key      |key_debounce_2            |    62|
 |19    |    uart_key     |key_debounce_3            |    63|
 |20    |  uart_clock     |frequency__parameterized0 |    52|
 +------+-----------------+--------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:04 ; elapsed = 00:01:04 . Memory (MB): peak = 962.812 ; gain = 719.941
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:28 ; elapsed = 00:01:28 . Memory (MB): peak = 941.410 ; gain = 700.641
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 26 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:52 ; elapsed = 00:00:58 . Memory (MB): peak = 962.812 ; gain = 362.848
-Synthesis Optimization Complete : Time (s): cpu = 00:01:04 ; elapsed = 00:01:04 . Memory (MB): peak = 962.812 ; gain = 719.941
+Synthesis finished with 0 errors, 0 critical warnings and 25 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:07 ; elapsed = 00:01:15 . Memory (MB): peak = 941.410 ; gain = 342.902
+Synthesis Optimization Complete : Time (s): cpu = 00:01:28 ; elapsed = 00:01:29 . Memory (MB): peak = 941.410 ; gain = 700.641
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 517 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 520 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 30 instances were transformed.
-  LD => LDCE: 30 instances
+  A total of 26 instances were transformed.
+  LD => LDCE: 26 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-132 Infos, 133 Warnings, 0 Critical Warnings and 0 Errors encountered.
+132 Infos, 132 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:06 ; elapsed = 00:01:08 . Memory (MB): peak = 962.812 ; gain = 731.473
+synth_design: Time (s): cpu = 00:01:31 ; elapsed = 00:01:33 . Memory (MB): peak = 941.410 ; gain = 711.152
 INFO: [Common 17-600] The following parameters have non-default value.
 general.maxThreads
 INFO: [Common 17-1381] The checkpoint 'D:/VivadoProCS202/CPU/CPU.runs/synth_1/cputop.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file cputop_utilization_synth.rpt -pb cputop_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.067 . Memory (MB): peak = 962.812 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Sun May 22 15:01:03 2022...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.071 . Memory (MB): peak = 941.410 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sun May 22 18:34:41 2022...
