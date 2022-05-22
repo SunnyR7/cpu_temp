@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-| Date         : Sun May 22 18:37:18 2022
+| Date         : Sun May 22 23:15:50 2022
 | Host         : LAPTOP-8IF7AABH running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -max_paths 10 -file cputop_timing_summary_routed.rpt -rpx cputop_timing_summary_routed.rpx -warn_on_violation
 | Design       : cputop
@@ -52,9 +52,7 @@ Table of Contents
 
 1. checking no_clock
 --------------------
- There are 355 register/latch pins with no clock driven by root clock pin: clk (HIGH)
-
- There are 1108 register/latch pins with no clock driven by root clock pin: cpu_clock/clk_out_reg/Q (HIGH)
+ There are 1430 register/latch pins with no clock driven by root clock pin: clk (HIGH)
 
  There are 20 register/latch pins with no clock driven by root clock pin: ifetch/instmem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_sel_reg.ce_pri.sel_pipe_reg[0]/Q (HIGH)
 
@@ -161,7 +159,7 @@ Table of Contents
 
 4. checking unconstrained_internal_endpoints
 --------------------------------------------
- There are 5326 pins that are not constrained for maximum delay. (HIGH)
+ There are 5262 pins that are not constrained for maximum delay. (HIGH)
 
  There are 0 pins that are not constrained for maximum delay due to constant clock.
 

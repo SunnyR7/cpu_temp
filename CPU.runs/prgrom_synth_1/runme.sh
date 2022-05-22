@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='D:/VivadoProCS202/CPU/CPU.runs/prgrom_synth_1'
+HD_PWD='D:/VivadoProCS202/CPU2/cpu_temp/CPU.runs/prgrom_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

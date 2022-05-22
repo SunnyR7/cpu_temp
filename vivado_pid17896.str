@@ -1,0 +1,77 @@
+/*
+
+Xilinx Vivado v2017.4 (64-bit) [Major: 2017, Minor: 4]
+SW Build: 2086221 on Fri Dec 15 20:55:39 MST 2017
+IP Build: 2085800 on Fri Dec 15 22:25:07 MST 2017
+
+Process ID: 17896
+License: Customer
+
+Current time: 	Sun May 22 23:01:15 CST 2022
+Time zone: 	China Standard Time (Asia/Shanghai)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 12
+
+Screen size: 1463x914
+Screen resolution (DPI): 96
+Available screens: 1
+Available disk space: 19 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_112 64-bit
+Java home: 	D:/software/vivado/download/Vivado/2017.4/tps/win64/jre
+JVM executable location: 	D:/software/vivado/download/Vivado/2017.4/tps/win64/jre/bin/java.exe
+
+User name: 	Sun
+User home directory: C:/Users/Sun
+User working directory: D:/VivadoProCS202/CPU2/cpu_temp
+User country: 	CN
+User language: 	zh
+User locale: 	zh_CN
+
+RDI_BASEROOT: D:/software/vivado/download/Vivado
+HDI_APPROOT: D:/software/vivado/download/Vivado/2017.4
+RDI_DATADIR: D:/software/vivado/download/Vivado/2017.4/data
+RDI_BINDIR: D:/software/vivado/download/Vivado/2017.4/bin
+
+Vivado preferences file location: C:/Users/Sun/AppData/Roaming/Xilinx/Vivado/2017.4/vivado.xml
+Vivado preferences directory: C:/Users/Sun/AppData/Roaming/Xilinx/Vivado/2017.4/
+Vivado layouts directory: C:/Users/Sun/AppData/Roaming/Xilinx/Vivado/2017.4/layouts
+PlanAhead jar file location: 	D:/software/vivado/download/Vivado/2017.4/lib/classes/planAhead.jar
+Vivado log file location: 	D:/VivadoProCS202/CPU2/cpu_temp/vivado.log
+Vivado journal file location: 	D:/VivadoProCS202/CPU2/cpu_temp/vivado.jou
+Engine tmp dir: 	D:/VivadoProCS202/CPU2/cpu_temp/.Xil/Vivado-17896-LAPTOP-8IF7AABH
+
+GUI allocated memory:	198 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 588 MB
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// Opening Vivado Project: D:\VivadoProCS202\CPU2\cpu_temp\CPU.xpr. Version: Vivado v2017.4 
+// bs (cj):  Open Project : addNotify
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// Tcl Message: open_project D:/VivadoProCS202/CPU2/cpu_temp/CPU.xpr 
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_CURRENT
+// [GUI Memory]: 59 MB (+59597kb) [00:00:07]
+// [Engine Memory]: 521 MB (+394820kb) [00:00:07]
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [Engine Memory]: 553 MB (+6242kb) [00:00:08]
+// [GUI Memory]: 62 MB (+24kb) [00:00:10]
+// [GUI Memory]: 69 MB (+4028kb) [00:00:12]
+// Tcl Message: open_project D:/VivadoProCS202/CPU2/cpu_temp/CPU.xpr 
+// Tcl Message: INFO: [Project 1-313] Project file moved from 'D:/VivadoProCS202/CPU' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/VivadoProCS202/CPU2/cpu_temp/SEU_CSE_507_user_uart_bmpg_1.3'. INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/software/vivado/download/Vivado/2017.4/data/ip'. 

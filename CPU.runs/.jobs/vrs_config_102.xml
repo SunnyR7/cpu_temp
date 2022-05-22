@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="RAM_synth_1" LaunchDir="D:/VivadoProCS202/CPU2/cpu_temp/CPU.runs/RAM_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="prgrom_synth_1" LaunchDir="D:/VivadoProCS202/CPU2/cpu_temp/CPU.runs/prgrom_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_1" LaunchDir="D:/VivadoProCS202/CPU2/cpu_temp/CPU.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="RAM_synth_1"/>
+		<Parent Id="prgrom_synth_1"/>
+	</Run>
+</Runs>
+

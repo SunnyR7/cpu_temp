@@ -101,7 +101,10 @@ module cputop (clk,switch,reset,uart_stage,led,confirm,confirm_a,confirm_b,rx,tx
     wire clock;
     wire clock_uart;
     frequency #(10) uart_clock(clk, 1'b1,clock_uart);
-    frequency #(6) cpu_clock(clk, 1'b1,clock);
+    cpuclk cpu_clock(
+        .clk_in1(clk), 
+        .clk_out1(clock)
+    );
 
     //MemOrIO
     wire LEDCtrl;
